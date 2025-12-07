@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>您的网站名称（中文） – Third</title>
+    <title>为什么神经 – 三级</title>
     <link>https://whynerve.me/docs/folder/third/</link>
-    <description>Recent content in Third on 您的网站名称（中文）</description>
+    <description>Recent content in 三级 on 为什么神经</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Forth</title>
+      <title>四级</title>
       <link>https://whynerve.me/docs/folder/third/forth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -23,21 +23,7 @@
       <description>
         
         
-        &lt;p&gt;Pages can be organized into folders again.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Third</title>
-      <link>https://whynerve.me/docs/folder/third/flower/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://whynerve.me/docs/folder/third/flower/</guid>
-      <description>
-        
-        
-        &lt;p&gt;所以随便&lt;/p&gt;
+        &lt;p&gt;这就是第四级。&lt;/p&gt;
 
       </description>
     </item>

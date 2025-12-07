@@ -2,18 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://whynerve.me/en/about/about/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://whynerve.me/about/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://whynerve.me/en/about/about/"
-                />
-  </url><url>
     <loc>https://whynerve.me/en/about/</loc>
     <xhtml:link
                 rel="alternate"
@@ -72,6 +60,30 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://whynerve.me/en/docs/"
+                />
+  </url><url>
+    <loc>https://whynerve.me/en/docs/folder/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://whynerve.me/docs/folder/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://whynerve.me/en/docs/folder/"
+                />
+  </url><url>
+    <loc>https://whynerve.me/en/docs/folder/leaf/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://whynerve.me/docs/folder/leaf/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://whynerve.me/en/docs/folder/leaf/"
                 />
   </url><url>
     <loc>https://whynerve.me/en/showcase/</loc>

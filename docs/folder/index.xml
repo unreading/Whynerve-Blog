@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>您的网站名称（中文） – Folder</title>
+    <title>为什么神经 – 文件夹</title>
     <link>https://whynerve.me/docs/folder/</link>
-    <description>Recent content in Folder on 您的网站名称（中文）</description>
+    <description>Recent content in 文件夹 on 为什么神经</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Leaf Page</title>
+      <title>扉页</title>
       <link>https://whynerve.me/docs/folder/leaf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -23,13 +23,13 @@
       <description>
         
         
-        &lt;p&gt;This page is under a folder.&lt;/p&gt;
+        &lt;p&gt;此页面位于文件夹下。&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Third</title>
+      <title>三级</title>
       <link>https://whynerve.me/docs/folder/third/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -37,7 +37,7 @@
       <description>
         
         
-        &lt;p&gt;Pages can be organized into folders again.&lt;/p&gt;
+        &lt;p&gt;可以继续进入下一级。&lt;/p&gt;
 
       </description>
     </item>
