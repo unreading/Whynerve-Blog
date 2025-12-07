@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home – Abouts</title>
+    <title>您的网站名称（中文） – Abouts</title>
     <link>https://whynerve.me/about/</link>
-    <description>Recent content in Abouts on Home</description>
+    <description>Recent content in Abouts on 您的网站名称（中文）</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     
 	  <atom:link href="https://whynerve.me/about/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>About</title>
+      <title>关于</title>
       <link>https://whynerve.me/about/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -23,7 +23,7 @@
       <description>
         
         
-        &lt;p&gt;This is the about page.&lt;/p&gt;
+        &lt;p&gt;这里有一些有关的事情。&lt;/p&gt;
 
       </description>
     </item>

@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Your Site Name (English) – Whynerve&#39;s Blog</title>
+    <link>https://whynerve.me/en/</link>
+    <description>Recent content in Whynerve&#39;s Blog on Your Site Name (English)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	  <atom:link href="https://whynerve.me/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+      
+    
+    
+  </channel>
+</rss>

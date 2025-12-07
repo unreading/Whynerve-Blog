@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home – 博客</title>
+    <title>您的网站名称（中文） – 博客</title>
     <link>https://whynerve.me/blog/</link>
-    <description>Recent content in 博客 on Home</description>
+    <description>Recent content in 博客 on 您的网站名称（中文）</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 06 Dec 2025 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="https://whynerve.me/blog/index.xml" rel="self" type="application/rss+xml" />

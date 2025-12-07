@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home – Documentation</title>
+    <title>您的网站名称（中文） – 文档</title>
     <link>https://whynerve.me/docs/</link>
-    <description>Recent content in Documentation on Home</description>
+    <description>Recent content in 文档 on 您的网站名称（中文）</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     
 	  <atom:link href="https://whynerve.me/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,20 +13,6 @@
         
       
     
-    
-    <item>
-      <title>Demo Page</title>
-      <link>https://whynerve.me/docs/first-page/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://whynerve.me/docs/first-page/</guid>
-      <description>
-        
-        
-        &lt;p&gt;A simple demo page.&lt;/p&gt;
-
-      </description>
-    </item>
     
     <item>
       <title>Leaf Page</title>
@@ -66,6 +52,20 @@
         
         
         &lt;p&gt;所以随便&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>示例页面</title>
+      <link>https://whynerve.me/docs/first-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://whynerve.me/docs/first-page/</guid>
+      <description>
+        
+        
+        &lt;p&gt;这是一个简单的示例页面。&lt;/p&gt;
 
       </description>
     </item>

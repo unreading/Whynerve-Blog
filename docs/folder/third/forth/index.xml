@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home – Forth</title>
+    <title>您的网站名称（中文） – Forth</title>
     <link>https://whynerve.me/docs/folder/third/forth/</link>
-    <description>Recent content in Forth on Home</description>
+    <description>Recent content in Forth on 您的网站名称（中文）</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     
 	  <atom:link href="https://whynerve.me/docs/folder/third/forth/index.xml" rel="self" type="application/rss+xml" />
     
