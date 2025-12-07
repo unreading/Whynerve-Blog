@@ -23,7 +23,8 @@
       <description>
         
         
-        &lt;h1&gt;1.简介&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/SaladDay/clash-for-lab/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SaladDay/clash-for-lab: ⚡ Clash for Lab 是为实验室环境设计的科学上网工具，无需sudo权限，优雅地一键式脚本安装&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;Clash-for-linux再修改后的使用流程&lt;/p&gt;
+&lt;h1&gt;1.简介&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/SaladDay/clash-for-lab/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SaladDay/clash-for-lab: ⚡ Clash for Lab 是为实验室环境设计的科学上网工具，无需sudo权限，优雅地一键式脚本安装&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;可以不需要sudo权限的,mihomo内核的linux版本clash，也是基于另一个优雅版本的分支库。&lt;/p&gt;
 &lt;p&gt;就是这个：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/nelvko/clash-for-linux-install&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;nelvko/clash-for-linux-install: 😼 优雅地使用基于 clash/mihomo 的代理环境&lt;/a&gt;&lt;/p&gt;
@@ -132,7 +133,6 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
       </description>
     </item>
     
