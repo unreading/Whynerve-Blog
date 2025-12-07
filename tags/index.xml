@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Site – Tags</title>
-    <link>https://whynerve.de5.net/tags/</link>
-    <description>Recent content in Tags on My Site</description>
+    <title>Home – Tags</title>
+    <link>https://whynerve.me/tags/</link>
+    <description>Recent content in Tags on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="https://whynerve.de5.net/tags/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://whynerve.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
       

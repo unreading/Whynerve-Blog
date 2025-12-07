@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Site – Third</title>
-    <link>https://whynerve.de5.net/docs/folder/third/</link>
-    <description>Recent content in Third on My Site</description>
+    <title>Home – Third</title>
+    <link>https://whynerve.me/docs/folder/third/</link>
+    <description>Recent content in Third on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="https://whynerve.de5.net/docs/folder/third/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://whynerve.me/docs/folder/third/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Forth</title>
-      <link>https://whynerve.de5.net/docs/folder/third/forth/</link>
+      <link>https://whynerve.me/docs/folder/third/forth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://whynerve.de5.net/docs/folder/third/forth/</guid>
+      <guid>https://whynerve.me/docs/folder/third/forth/</guid>
       <description>
         
         
@@ -30,10 +30,10 @@
     
     <item>
       <title>Third</title>
-      <link>https://whynerve.de5.net/docs/folder/third/flower/</link>
+      <link>https://whynerve.me/docs/folder/third/flower/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://whynerve.de5.net/docs/folder/third/flower/</guid>
+      <guid>https://whynerve.me/docs/folder/third/flower/</guid>
       <description>
         
         
