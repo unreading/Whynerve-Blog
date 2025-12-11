@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>展示界面 – 为什么神经</title>
-  <meta name="description" content="用来展示点什么的页面" /><link rel="canonical" href="https://whynerve.me/showcase/" itemprop="url" />
+  <meta name="description" content="用来展示点什么的页面" /><link rel="canonical" href="https://whynerve.me/result/" itemprop="url" />
 
 <meta property="og:title" content="展示界面">
 <meta
@@ -24,12 +24,12 @@
   content="
     website
   ">
-<meta property="og:url" content="https://whynerve.me/showcase/">
+<meta property="og:url" content="https://whynerve.me/result/">
 
 
   <meta itemprop="name" content="展示界面">
   <meta itemprop="description" content="用来展示点什么的页面">
-  <meta itemprop="dateModified" content="2025-12-07T19:51:24+08:00">
+  <meta itemprop="dateModified" content="2025-12-11T10:42:25+08:00">
   <meta itemprop="wordCount" content="1">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="展示界面">
@@ -49,7 +49,36 @@
 
   
   
-  </head>
+  
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        const titleElement = document.getElementById('rainbow-title');
+
+        if (titleElement) {
+            
+            titleElement.addEventListener('mousemove', (e) => {
+                const rect = titleElement.getBoundingClientRect();
+                
+                const x = e.clientX - rect.left; 
+                const width = rect.width;
+                
+                
+                
+                const backgroundPositionX = 100 - (x / width) * 100;
+                
+                
+                titleElement.style.backgroundPosition = `${backgroundPositionX}% 50%`;
+            });
+
+            
+            titleElement.addEventListener('mouseleave', () => {
+                 titleElement.style.backgroundPosition = '100% 50%';
+            });
+        }
+    });
+</script></head>
 <body>
 <div class="hextra-banner hx:max-md:sticky hx:top-0 hx:z-20 hx:px-6 hx:text-center hx:text-slate-50 hx:dark:text-white hx:bg-neutral-900 hx:dark:bg-neutral-800 hx:print:[display:none]">
   <div class="hx:relative hx:flex hx:items-center hx:justify-center hx:font-medium hx:text-sm hx:py-2.5"><div style="white-space: pre-wrap" class="hx:px-8">欢迎访问我的博客！🎉</div><button
@@ -67,22 +96,22 @@
 </a>
 <a
   title=""
-  href="/docs"
-  
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
-><span class="hx:text-center">文档</span>
-</a><a
-  title=""
   href="/blog"
   
   class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
 ><span class="hx:text-center">博客</span>
 </a><a
   title=""
-  href="/showcase"
+  href="/docs"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">文档</span>
+</a><a
+  title=""
+  href="/result"
   
   class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
-><span class="hx:text-center">演示</span>
+><span class="hx:text-center">成果</span>
 </a><a
   title=""
   href="/about"
@@ -307,7 +336,7 @@
           <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
-    href="/showcase/"
+    href="/result/"
     
   >展示界面
     </a>
@@ -340,7 +369,7 @@
         
         <li class="hx:flex hx:flex-col">
           <a
-            href="/showcase/"
+            href="/result/"
             class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
           >简体中文<span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></a>
         </li>
@@ -348,7 +377,7 @@
         
         <li class="hx:flex hx:flex-col">
           <a
-            href="/en/showcase/"
+            href="/en/result/"
             class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
           >English</a>
         </li>

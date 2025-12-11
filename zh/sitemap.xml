@@ -68,16 +68,19 @@
                 />
   </url><url>
     <loc>https://whynerve.me/about/</loc>
-    <lastmod>2025-12-07T23:07:09+08:00</lastmod>
+    <lastmod>2025-12-11T10:42:25+08:00</lastmod>
+  </url><url>
+    <loc>https://whynerve.me/</loc>
+    <lastmod>2025-12-11T10:42:25+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://whynerve.me/en/about/"
+                href="https://whynerve.me/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="https://whynerve.me/about/"
+                href="https://whynerve.me/"
                 />
   </url><url>
     <loc>https://whynerve.me/docs/folder/third/</loc>
@@ -101,19 +104,6 @@
   </url><url>
     <loc>https://whynerve.me/docs/folder/third/forth/soil/</loc>
     <lastmod>2025-12-07T23:07:09+08:00</lastmod>
-  </url><url>
-    <loc>https://whynerve.me/</loc>
-    <lastmod>2025-12-07T23:07:09+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://whynerve.me/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://whynerve.me/"
-                />
   </url><url>
     <loc>https://whynerve.me/docs/</loc>
     <lastmod>2025-12-07T19:51:24+08:00</lastmod>
@@ -144,17 +134,17 @@
     <loc>https://whynerve.me/docs/folder/third/forth/fifth/</loc>
     <lastmod>2025-12-07T23:07:09+08:00</lastmod>
   </url><url>
-    <loc>https://whynerve.me/showcase/</loc>
-    <lastmod>2025-12-07T19:51:24+08:00</lastmod>
+    <loc>https://whynerve.me/result/</loc>
+    <lastmod>2025-12-11T10:42:25+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://whynerve.me/en/showcase/"
+                href="https://whynerve.me/en/result/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="https://whynerve.me/showcase/"
+                href="https://whynerve.me/result/"
                 />
   </url>
 </urlset>

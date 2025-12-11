@@ -2,19 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://whynerve.me/en/about/</loc>
-    <lastmod>2025-12-07T23:07:09+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://whynerve.me/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://whynerve.me/en/about/"
-                />
-  </url><url>
     <loc>https://whynerve.me/en/blog/</loc>
     <lastmod>2025-12-07T19:51:24+08:00</lastmod>
     <xhtml:link
@@ -92,17 +79,17 @@
                 href="https://whynerve.me/en/docs/folder/leaf/"
                 />
   </url><url>
-    <loc>https://whynerve.me/en/showcase/</loc>
-    <lastmod>2025-12-07T19:51:24+08:00</lastmod>
+    <loc>https://whynerve.me/en/result/</loc>
+    <lastmod>2025-12-11T10:42:25+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="https://whynerve.me/showcase/"
+                href="https://whynerve.me/result/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://whynerve.me/en/showcase/"
+                href="https://whynerve.me/en/result/"
                 />
   </url><url>
     <loc>https://whynerve.me/en/tags/</loc>
