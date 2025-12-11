@@ -406,11 +406,13 @@ Keep Curious, Keep Moving.">
         <style>
  
 header, nav, .hx-navbar, .nav-container, .hx-breadcrumb {
+     
     transition: opacity 0.5s ease, transform 0.5s ease !important;
     opacity: 1;
     transform: translateY(0);
 }
 
+ 
 body.in-splash-screen header,
 body.in-splash-screen nav,
 body.in-splash-screen .hx-navbar,
@@ -419,9 +421,13 @@ body.in-splash-screen .hx-breadcrumb {
     position: fixed !important;
     top: 0;
     width: 100%;
+     
     opacity: 0 !important;
     pointer-events: none !important;
     transform: translateY(-20px) !important;
+     
+     
+    transition: none !important;
 }
 
 h1 { display: none !important; }
@@ -448,27 +454,32 @@ main {
     margin-right: -50vw;
     background: #ffffff;
     z-index: 10;
-    overflow: visible; 
+    
+     
+     
+    overflow: hidden; 
+    
+     
+    top: 0;
+    margin-top: 0;
+    padding-top: 0;
 }
+
 html.dark .fullscreen-hero { background: #111111; }
 
  
 
- 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
- 
 @keyframes rainbow-move {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
- 
- 
 .hero-content {
     margin-bottom: 200px; 
     z-index: 2;
@@ -477,7 +488,6 @@ html.dark .fullscreen-hero { background: #111111; }
     animation: fadeInUp 1s ease-out backwards; 
 }
 
- 
 .hero-title {
     display: block !important;
     font-size: 4rem;
@@ -485,47 +495,26 @@ html.dark .fullscreen-hero { background: #111111; }
     margin-bottom: 1rem;
     letter-spacing: -2px;
     cursor: default;
-
-     
     color: #1a202c; 
-    
-     
     animation: none !important;
-    
-     
     transition: text-shadow 0.3s ease, filter 0.3s ease;
-    
     will-change: filter, background-position;
 }
 
 html.dark .hero-title { color: #f7fafc; }
 
- 
 .hero-title:hover {
-     
     color: transparent;
     -webkit-text-fill-color: transparent;
-    
-     
     background-image: linear-gradient(
         90deg, 
         #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff, #ff0000
     );
-    
-     
     background-size: 400% auto;
-    
-     
     -webkit-background-clip: text;
     background-clip: text;
-    
-     
     animation: rainbow-move 3s linear infinite !important;
-    
-     
     filter: url(#smoke-flow);
-    
-     
     text-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 
@@ -533,7 +522,6 @@ html.dark .hero-title { color: #f7fafc; }
     font-size: 1.5rem;
     color: #718096;
     line-height: 1.6;
-     
     animation: fadeInUp 1s ease-out 0.3s backwards;
 }
 html.dark .hero-subtitle { color: #a0aec0; }
@@ -548,6 +536,7 @@ html.dark .hero-subtitle { color: #a0aec0; }
     z-index: 20;
     opacity: 1;
     transition: opacity 0.1s ease-out; 
+    padding: 20px; 
 }
 
 .arrow-chevron {
@@ -587,7 +576,7 @@ html.dark .arrow-chevron { border-color: #e2e8f0; }
         </p>
     </div>
 
-    <div class="scroll-indicator" id="scrollArrow" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'});">
+    <div class="scroll-indicator" id="scrollArrow">
         <div class="arrow-chevron"></div>
         <div class="arrow-chevron"></div>
         <div class="arrow-chevron"></div>
@@ -606,6 +595,23 @@ html.dark .arrow-chevron { border-color: #e2e8f0; }
 </svg>
 
 <script>
+
+
+
+
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual'; 
+}
+window.scrollTo(0, 0); 
+
+
+
+
+
+if (document.body) {
+    document.body.classList.add('in-splash-screen');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     var body = document.body;
     var heroContent = document.getElementById('heroContent');
@@ -613,7 +619,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var heroHeight = window.innerHeight;
 
     
-    body.classList.add('in-splash-screen');
+    if (!body.classList.contains('in-splash-screen')) {
+        body.classList.add('in-splash-screen');
+    }
+
+    
+    if (scrollArrow) {
+        scrollArrow.addEventListener('click', function() {
+            window.scrollTo({
+                top: heroHeight, 
+                behavior: 'smooth'
+            });
+        });
+    }
 
     
     var ticking = false;
@@ -636,6 +654,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     heroContent.style.transform = 'translateY(-' + (scrollY / 3) + 'px)';
                 }
 
+                
                 
                 if (scrollY > heroHeight - 80) {
                     body.classList.remove('in-splash-screen');
