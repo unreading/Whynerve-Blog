@@ -663,14 +663,14 @@ document.addEventListener('DOMContentLoaded', function() {
  
 .text-underline-anim {
     display: inline; 
-    background-image: linear-gradient(to right, #c6c12f, #ff7300);  
+    background-image: linear-gradient(to right, #c6c12f, #ff7300);
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-size: 0% 2px;  
+    background-size: 0% 2px;
     transition: background-size 0.5s ease-out;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    padding-bottom: 2px;  
+    padding-bottom: 2px;
 }
 
  
@@ -694,14 +694,23 @@ document.addEventListener('DOMContentLoaded', function() {
 .avatar-link {
     display: block; 
     cursor: pointer;
+     
 }
+
 .avatar-link img {
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+     
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.3s ease;
+     
+    border: none;
+    outline: none;
 }
+
 .avatar-link:hover img {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
-    border-color: #0056b3 !important;
+    transform: scale(1.05);  
+    
+     
+     
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)); 
 }
 
  
@@ -719,11 +728,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="intro-container">
     
-<div style="flex-shrink: 0;">
-    <a href="/about/" class="avatar-link" title="点击查看关于我">
-        <img src="favicon.svg" alt="个人头像" style="width: 130px; height: 130px;">
-    </a>
-</div>
+    <div style="flex-shrink: 0;">
+        <a href="/about/" class="avatar-link" title="点击查看关于我">
+            <img src="favicon.svg" alt="个人头像" style="width: 130px; height: 130px;">
+        </a>
+    </div>
     
     <div class="intro-text-wrapper" style="flex-grow: 1;">
         
