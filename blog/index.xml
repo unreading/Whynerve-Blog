@@ -23,8 +23,7 @@
       <description>
         
         
-        &lt;p&gt;简介:本文就是一篇关于Gemini 白嫖的文章,当时的时间是11.22&lt;/p&gt;
-&lt;h1&gt;注意事项&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://whynerve.me/images/image-20251121160914-rvknkid.png&#34; alt=&#34;image&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+        &lt;h1&gt;注意事项&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://whynerve.me/images/image-20251121160914-rvknkid.png&#34; alt=&#34;image&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;使用Gemini数据可能被谷歌使用，需要知道！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;人工搭建一个属于自己的本地ai大模型，和保留属于自己的数据还是比较重要的，&lt;strong&gt;我觉得这是未来的一个小风口，类似于nas一样。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;首先，想办法搭建一个属于自己的本地大模型，找到其能用于辅助代码写作和性能的最佳交叉。&lt;/p&gt;
@@ -98,6 +97,7 @@
     &lt;a href=&#34;#&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h1&gt;4.参考资料&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=e2OBaYIjcK8&amp;amp;t=2s&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;免费获得谷歌AI大礼包一年 | Gemini高级版 | Google One 2TB空间| Google AI Pro | SheerID验证方法&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;根据视频，可以看自己卡在哪里，但是其中方法已经陈旧参考我的文档。&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
+
       </description>
     </item>
     
@@ -110,8 +110,7 @@
       <description>
         
         
-        &lt;p&gt;简介:2025-08-15 scGPT的安装和使用过程记录&lt;/p&gt;
-&lt;h2&gt;1.scGPT新版本安装&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1scgpt新版本安装&#34;&gt;&lt;/span&gt;
+        &lt;h2&gt;1.scGPT新版本安装&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1scgpt新版本安装&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#1scgpt%e6%96%b0%e7%89%88%e6%9c%ac%e5%ae%89%e8%a3%85&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;参考链接:&lt;a href=&#34;https://cambridge-ceu.github.io/csd3/Python/scGPT.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cambridge-ceu&lt;/a&gt;
 两种方法中的第一种,使用py311和torch2.x兼容第二种方法中的3.9不与2.x兼容。&lt;/p&gt;
 &lt;p&gt;环境:python 3.11&lt;/p&gt;
@@ -123,7 +122,7 @@
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install &lt;span class=&#34;nv&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;2.3.0 &lt;span class=&#34;nv&#34;&gt;torchvision&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;0.18.0 &lt;span class=&#34;nv&#34;&gt;torchaudio&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;2.3.0 --index-url https://download.pytorch.org/whl/cu121&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -142,7 +141,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install ./*&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -157,7 +156,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install scgpt&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -182,7 +181,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install flash-attn&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;1.0.4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -200,7 +199,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install gseapy&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -213,7 +212,7 @@
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip list &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;/scanpy|scib|scvi|scgpt|flash_attn|torch|wandb|numpy/&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -230,7 +229,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mamba install scanpy omicverse scvi-tools pertpy scvelo scikit-image -y&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -252,8 +251,7 @@
       <description>
         
         
-        &lt;p&gt;简介:Clash-for-linux开源项目再修改后,我个人的一个使用流程记录&lt;/p&gt;
-&lt;h1&gt;1.简介&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/SaladDay/clash-for-lab/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SaladDay/clash-for-lab: ⚡ Clash for Lab 是为实验室环境设计的科学上网工具，无需sudo权限，优雅地一键式脚本安装&lt;/a&gt;&lt;/p&gt;
+        &lt;h1&gt;1.简介&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/SaladDay/clash-for-lab/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SaladDay/clash-for-lab: ⚡ Clash for Lab 是为实验室环境设计的科学上网工具，无需sudo权限，优雅地一键式脚本安装&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;可以不需要sudo权限的,mihomo内核的linux版本clash，也是基于另一个优雅版本的分支库。&lt;/p&gt;
 &lt;p&gt;就是这个：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/nelvko/clash-for-linux-install&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;nelvko/clash-for-linux-install: 😼 优雅地使用基于 clash/mihomo 的代理环境&lt;/a&gt;&lt;/p&gt;
@@ -266,7 +264,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; clash-for-lab-customization&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -283,7 +281,7 @@
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash install.sh&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -311,7 +309,7 @@
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash install.sh&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -325,7 +323,7 @@
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mihomo subscribe https://your-subscription-url&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -338,7 +336,7 @@
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mihomo on&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
@@ -355,7 +353,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -I https://www.google.com&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
+    title=&#34;复制代码&#34;
   &gt;
     &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
