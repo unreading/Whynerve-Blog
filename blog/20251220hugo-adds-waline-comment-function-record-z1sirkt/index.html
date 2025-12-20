@@ -8,41 +8,47 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Clash的工具再修改 – 为什么神经</title>
-  <meta name="description" content="Clash-for-linux开源项目再修改后,我个人的一个使用流程记录" /><link rel="canonical" href="https://whynerve.me/blog/clashtool/" itemprop="url" />
+<title>Hugo添加Waline评论功能记录 – 为什么神经</title>
+  <meta name="description" content="Hugo添加Waline评论功能记录简介:
+本来想通过主题的内置功能，后来发现没有Waline的借口，Hextra主题目前版本只有内置的Giscus，所以自己摸索了一下。" /><link rel="canonical" href="https://whynerve.me/blog/20251220hugo-adds-waline-comment-function-record-z1sirkt/" itemprop="url" />
 
-<meta property="og:title" content="Clash的工具再修改">
+<meta property="og:title" content="Hugo添加Waline评论功能记录">
 <meta
   property="og:description"
   content="
-    Clash-for-linux开源项目再修改后,我个人的一个使用流程记录
+    
+      Hugo添加Waline评论功能记录简介:
+本来想通过主题的内置功能，后来发现没有Waline的借口，Hextra主题目前版本只有内置的Giscus，所以自己摸索了一下。
+    
   ">
 <meta
   property="og:type"
   content="
     article
   ">
-<meta property="og:url" content="https://whynerve.me/blog/clashtool/"><meta property="article:section" content="blog">
+<meta property="og:url" content="https://whynerve.me/blog/20251220hugo-adds-waline-comment-function-record-z1sirkt/"><meta property="article:section" content="blog">
 
 <meta
   property="article:published_time"
-  content="2024-12-08T10:00:00+08:00">
+  content="2025-12-20T20:16:30+08:00">
 
 
 <meta
   property="article:modified_time"
-  content="2025-12-20T14:38:00+08:00">
+  content="2025-12-20T23:58:31+08:00">
 
 
 
-  <meta itemprop="name" content="Clash的工具再修改">
-  <meta itemprop="description" content="Clash-for-linux开源项目再修改后,我个人的一个使用流程记录">
-  <meta itemprop="datePublished" content="2024-12-08T10:00:00+08:00">
-  <meta itemprop="dateModified" content="2025-12-20T14:38:00+08:00">
-  <meta itemprop="wordCount" content="487">
+  <meta itemprop="name" content="Hugo添加Waline评论功能记录">
+  <meta itemprop="description" content="Hugo添加Waline评论功能记录简介:
+本来想通过主题的内置功能，后来发现没有Waline的借口，Hextra主题目前版本只有内置的Giscus，所以自己摸索了一下。">
+  <meta itemprop="datePublished" content="2025-12-20T20:16:30+08:00">
+  <meta itemprop="dateModified" content="2025-12-20T23:58:31+08:00">
+  <meta itemprop="wordCount" content="1675">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Clash的工具再修改">
-  <meta name="twitter:description" content="Clash-for-linux开源项目再修改后,我个人的一个使用流程记录">
+  <meta name="twitter:title" content="Hugo添加Waline评论功能记录">
+  <meta name="twitter:description" content="Hugo添加Waline评论功能记录简介:
+本来想通过主题的内置功能，后来发现没有Waline的借口，Hextra主题目前版本只有内置的Giscus，所以自己摸索了一下。">
 
     <link rel="preload" href="/css/compiled/main.min.17710d51bade386a00e4b8b3ecb63e4979d7886de3a37aa7221d4bee96b72f47.css" as="style" integrity="sha256-F3ENUbreOGoA5Liz7LY&#43;SXnXiG3jo3qnIh1L7pa3L0c=" />
     <link href="/css/compiled/main.min.17710d51bade386a00e4b8b3ecb63e4979d7886de3a37aa7221d4bee96b72f47.css" rel="stylesheet" integrity="sha256-F3ENUbreOGoA5Liz7LY&#43;SXnXiG3jo3qnIh1L7pa3L0c=" />
@@ -186,13 +192,34 @@
   >博客
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/blog/20251220hugo-adds-waline-comment-function-record-z1sirkt/"
     
   >Hugo添加Waline评论功能记录
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              ></a>
+            </li>
+          <li>
+              <a
+                href="#21%e6%96%87%e4%bb%b6%e5%8a%9f%e8%83%bd"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >2.1文件功能</a>
+            </li>
+          <li>
+              <a
+                href="#22%e4%bf%ae%e6%94%b9%e6%96%87%e4%bb%b6"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >2.2修改文件</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -210,22 +237,13 @@
   >scGPT学习日记
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/blog/clashtool/"
     
   >Clash的工具再修改
     </a>
-  
-    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
-              <a
-                href="#"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              ></a>
-            </li>
-          </ul>
-  
               
             </li></ul>
       </div></li>
@@ -353,7 +371,7 @@
         
         <li class="hx:flex hx:flex-col">
           <a
-            href="/blog/clashtool/"
+            href="/blog/20251220hugo-adds-waline-comment-function-record-z1sirkt/"
             class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
           >简体中文<span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></a>
         </li>
@@ -416,27 +434,39 @@
 </div></div></aside>
   
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">此页上</p><ul></ul><ul>
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">此页上</p><ul></ul><ul></ul><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1-%e5%85%8b%e9%9a%86%e9%a1%b9%e7%9b%ae">1. 克隆项目
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1waline%e9%83%a8%e7%bd%b2">1.Waline部署
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2-%e8%bf%90%e8%a1%8c%e5%ae%89%e8%a3%85%e8%84%9a%e6%9c%ac">2. 运行安装脚本
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2%e7%bb%91%e5%ae%9a%e5%9f%9f%e5%90%8d%e5%8f%af%e9%80%89">2.绑定域名（可选）
+        </a>
+      </li></ul><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#21%e6%96%87%e4%bb%b6%e5%8a%9f%e8%83%bd">2.1文件功能
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#3-%e9%85%8d%e7%bd%ae%e8%ae%a2%e9%98%85">3. 配置订阅
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#22%e4%bf%ae%e6%94%b9%e6%96%87%e4%bb%b6">2.2修改文件
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#4-%e5%90%af%e5%8a%a8%e4%bb%a3%e7%90%86">4. 启动代理
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%a2%9e%e5%8a%a0waline%e7%b1%bb%e5%9e%8b">增加Waline类型
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%aa%8c%e8%af%81%e5%ae%89%e8%a3%85">验证安装
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%bf%ae%e6%94%b9yaml%e6%96%87%e4%bb%b6">修改yaml文件
         </a>
-      </li></ul>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%a2%9e%e5%8a%a0walinehtml%e6%96%87%e4%bb%b6">增加waline.html文件
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%b7%bb%e5%8a%a0waline%e7%9a%84css%e6%96%87%e4%bb%b6">添加waline的css文件
+        </a>
+      </li></ul><ul></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>返回顶部</span>
@@ -454,10 +484,10 @@
       <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
           <a href="/blog/">博客</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Clash的工具再修改</div>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Hugo添加Waline评论功能记录</div>
   </div>
 
-      <h1 class="hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">Clash的工具再修改</h1>
+      <h1 class="hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">Hugo添加Waline评论功能记录</h1>
 
       
       <div class="hx:mt-4 hx:mb-16 hx:text-gray-500 hx:dark:text-gray-400 hx:text-sm" 
@@ -467,7 +497,7 @@
                 <svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                 </svg>
-                <span>2024年12月8日</span>
+                <span>2025年12月20日</span>
             </div><span class="hx:mx-1">·</span><div class="hx:flex hx:items-center"><svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                 </svg>
@@ -483,111 +513,69 @@
                 <svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <span>2 分钟</span>
+                <span>8 分钟</span>
             </div></div>
       
       
       <div class="content">
-        <h1>1.简介</h1><p><a href="https://github.com/SaladDay/clash-for-lab/"target="_blank" rel="noopener">SaladDay/clash-for-lab: ⚡ Clash for Lab 是为实验室环境设计的科学上网工具，无需sudo权限，优雅地一键式脚本安装</a></p>
-<p>可以不需要sudo权限的,mihomo内核的linux版本clash，也是基于另一个优雅版本的分支库。</p>
-<p>就是这个：</p>
-<p><a href="https://github.com/nelvko/clash-for-linux-install"target="_blank" rel="noopener">nelvko/clash-for-linux-install: 😼 优雅地使用基于 clash/mihomo 的代理环境</a></p>
-<p>而基于此，我又构建了一个属于自己的版本：
-<a href="https://github.com/unreading/clash-for-lab-customization#"target="_blank" rel="noopener">unreading/clash-for-lab-customization: ⚡ Clash for Lab 是为实验室环境设计的科学上网工具，无需sudo权限，优雅地一键式脚本安装</a></p>
-<h1>2.安装流程和注意使用</h1><h4>1. 克隆项目<span class="hx:absolute hx:-mt-20" id="1-克隆项目"></span>
-    <a href="#1-%e5%85%8b%e9%9a%86%e9%a1%b9%e7%9b%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git clone https://kkgithub.com/unreading/clash-for-lab-customization.git
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> clash-for-lab-customization</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="复制代码"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<ul>
-<li>上述克隆命令使用了加速链接。如果无法访问，请尝试其他<a href="https://ghproxy.link/"target="_blank" rel="noopener">可用链接</a>，或直接下载压缩包进行安装。</li>
+        <h1>Hugo添加Waline评论功能记录</h1><p>简介:</p>
+<p>本来想通过主题的内置功能，后来发现没有Waline的借口，Hextra主题目前版本只有内置的Giscus，所以自己摸索了一下。</p>
+<h1>1.背景介绍</h1><ul>
+<li>
+<p>首先我使用的是Hugo的Hextra主题构建的博客网站</p>
+</li>
+<li>
+<p>Hextra内置了Giscus项目的接口，以下是Hextra的文档，但是Giscus只能登录github评论，感觉功能单一。<br>
+<a href="https://imfing.github.io/hextra/zh-cn/docs/advanced/comments/"target="_blank" rel="noopener">评论系统 – Hextra</a></p>
+</li>
+<li>
+<p>Hugo官方推荐的项目是Disqus，但是该项目是商业产品，可以个人免费使用但是可能存在广告，同时Hugo的一些其他项目样式又没有那么喜欢，所以最终的选择是，ai推荐的有中文文档而且对国人相对友好的@aline。</p>
+<p><a href="https://hugo.opendocs.io/content-management/comments/"target="_blank" rel="noopener">评论 | Hugo官方文档</a> | <a href="https://waline.js.org/"target="_blank" rel="noopener">Waline | Waline</a></p>
+</li>
 </ul>
-<h4>2. 运行安装脚本<span class="hx:absolute hx:-mt-20" id="2-运行安装脚本"></span>
-    <a href="#2-%e8%bf%90%e8%a1%8c%e5%ae%89%e8%a3%85%e8%84%9a%e6%9c%ac" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><strong>(旧版)</strong></p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bash install.sh</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="复制代码"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<blockquote>
-  <p>默认会安装在<code>~/tools/mihomo/</code>目录下
-如果需要修改，在项目目录下<code>vim script/common.sh</code></p>
-<p>定位在 MIHOMO_BASE_DIR=&quot;$HOME/tools/mihomo&quot; 修改这个MIHOMO_BASE_DIR即自定义工作目录</p>
-
-</blockquote>
-<p>安装过程中会：</p>
+<p>‍</p>
+<h1>2.Waline部署</h1><h3>1.Waline部署<span class="hx:absolute hx:-mt-20" id="1waline部署"></span>
+    <a href="#1waline%e9%83%a8%e7%bd%b2" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>参考官方文档，简单易上手，用心看一遍，该懂的都懂了。</p>
+<p><a href="https://waline.js.org/guide/get-started/"target="_blank" rel="noopener">快速上手 | Waline</a></p>
+<p>‍</p>
+<h3>2.绑定域名（可选）<span class="hx:absolute hx:-mt-20" id="2绑定域名可选"></span>
+    <a href="#2%e7%bb%91%e5%ae%9a%e5%9f%9f%e5%90%8d%e5%8f%af%e9%80%89" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>官方文档里的绑定域名的方法，不知道是现在需要修改还是如何，不能只填写CNAME，需要按照vercel的规定，绑定域名时会出现，一键绑定按钮。</p>
+<p>！！！先在vercel中添加域名，然后点击一键绑定会自动跳转到域名托管的DNS平台，之后验证就可以了。</p>
+<p>如果是cloudflare平台托管域名，那么添加DNS的页面如下：</p>
+<p><img src="/images/image-20251220232636-y9h1vm1.png" alt="image"  loading="lazy" /></p>
+<h1>3.梳理结构</h1><p>对于我这样的小白来说，本来对于hugo本身的结构就不清楚，但是可以使用ai直接分析github项目，例如Google gemini就有导入github代码库的功能。或者使用vibe coding，claude code router驱动的使用GLM的claude code等来分析hugo项目的结构，不同的主题可能不同。</p>
+<p>这里是关于hextra主题的结构，首先我找到了，作者内置的评论功能相关的文件，分别是：</p>
 <ul>
-<li>自动检测系统架构</li>
-<li>下载适配的 mihomo 内核</li>
-<li>配置用户环境变量- <strong>-会自定义在bash/zsh中</strong></li>
-<li>设置命令行别名</li>
-<li>检测并分配可用端口</li>
+<li>hextra/layouts/partials/components/comments.html</li>
+<li>hextra/layouts/partials/components/giscus.html</li>
+<li>hextra/layouts/single.html</li>
 </ul>
-<p><strong>（新版）</strong></p>
-<p>直接跟着提示操作，完美而优雅。</p>
+<h2>2.1文件功能<span class="hx:absolute hx:-mt-20" id="21文件功能"></span>
+    <a href="#21%e6%96%87%e4%bb%b6%e5%8a%9f%e8%83%bd" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ol>
+<li>在comments.html中作者主要规定了，comments参数默认是false，同时只有type是giscus的借口才接受。</li>
+<li>giscus.html文件，就是对于giscus的设置，这个自己可以查看之前的文档，和通过ai解读一下。</li>
+<li>single.html文件，将comments放在了规定的某些的页面的尾部。</li>
+</ol>
+<h2>2.2修改文件<span class="hx:absolute hx:-mt-20" id="22修改文件"></span>
+    <a href="#22%e4%bf%ae%e6%94%b9%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>根据上面的原本的文件结构，自然而然就需要修改这些文件来添加waline的借口，在此之前，需要先完成waline的托管注册。</p>
+<h3>增加Waline类型<span class="hx:absolute hx:-mt-20" id="增加waline类型"></span>
+    <a href="#%e5%a2%9e%e5%8a%a0waline%e7%b1%bb%e5%9e%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>在comments.html中增加Waline类型：<br>
+修改后的文件</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bash install.sh</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="复制代码"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<h4>3. 配置订阅<span class="hx:absolute hx:-mt-20" id="3-配置订阅"></span>
-    <a href="#3-%e9%85%8d%e7%bd%ae%e8%ae%a2%e9%98%85" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>安装完成后，<strong>设置你的代理订阅：</strong></p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mihomo subscribe https://your-subscription-url</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="复制代码"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<h4>4. 启动代理<span class="hx:absolute hx:-mt-20" id="4-启动代理"></span>
-    <a href="#4-%e5%90%af%e5%8a%a8%e4%bb%a3%e7%90%86" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mihomo on</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="复制代码"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<h3>验证安装<span class="hx:absolute hx:-mt-20" id="验证安装"></span>
-    <a href="#%e9%aa%8c%e8%af%81%e5%ae%89%e8%a3%85" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 检查服务状态</span>
-</span></span><span class="line"><span class="cl">mihomo status
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- $enableComments := site.Params.comments.enable | default false -}}
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 测试网络连接</span>
-</span></span><span class="line"><span class="cl">curl -I https://www.google.com</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</span></span><span class="line"><span class="cl">{{ if not (eq .Params.comments nil) }}
+</span></span><span class="line"><span class="cl">  {{ $enableComments = .Params.comments }}
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- if $enableComments -}}
+</span></span><span class="line"><span class="cl">  {{- if eq site.Params.comments.type &#34;giscus&#34; -}}
+</span></span><span class="line"><span class="cl">    {{ partial &#34;components/giscus.html&#34; . }}
+</span></span><span class="line"><span class="cl">  {{- else if eq site.Params.comments.type &#34;waline&#34; -}} {{/* 新增部分 */}}
+</span></span><span class="line"><span class="cl">    {{ partial &#34;components/waline.html&#34; . }}
+</span></span><span class="line"><span class="cl">  {{- end -}}
+</span></span><span class="line"><span class="cl">{{- end -}}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -597,11 +585,108 @@
   </button>
 </div>
 </div>
+<p>新增的语句</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  {{- else if eq site.Params.comments.type &#34;waline&#34; -}} {{/* 新增部分 */}}
+</span></span><span class="line"><span class="cl">    {{ partial &#34;components/waline.html&#34; . }}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>‍</p>
+<h3>修改yaml文件<span class="hx:absolute hx:-mt-20" id="修改yaml文件"></span>
+    <a href="#%e4%bf%ae%e6%94%b9yaml%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>在配置文件中，这里是hugo.yaml中添加对应的参数：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">comments</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">waline </span><span class="w"> </span><span class="c"># 将类型改为 waline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 新增 Waline 配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">waline</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">serverURL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://walineserver.com&#34;</span><span class="w"> </span><span class="c"># 替换为你自己的 Waline 服务端地址</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>增加waline.html文件<span class="hx:absolute hx:-mt-20" id="增加walinehtml文件"></span>
+    <a href="#%e5%a2%9e%e5%8a%a0walinehtml%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>在comments.html添加了这一段代码</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  {{- else if eq site.Params.comments.type &#34;waline&#34; -}} {{/* 新增部分 */}}
+</span></span><span class="line"><span class="cl">    {{ partial &#34;components/waline.html&#34; . }}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>所以，需要在<code>hextra/layouts/partials/components/</code>目录下，新建一个waline.html文件，来获取waline的默认代码：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/@waline/client@v3/dist/waline.css&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;waline&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hx-mt-8&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- $showReaction := (default true .Params.reaction) -}}
+</span></span><span class="line"><span class="cl">{{- with site.Params.comments.waline -}}
+</span></span><span class="line"><span class="cl">{{- /* 映射大小写并构建配置对象 */ -}}
+</span></span><span class="line"><span class="cl">{{- $config := dict &#34;el&#34; &#34;#waline&#34; &#34;dark&#34; `html[data-scheme=&#34;dark&#34;]` -}}
+</span></span><span class="line"><span class="cl">{{- $replaceKeys := dict &#34;serverurl&#34; &#34;serverURL&#34; &#34;pagesize&#34; &#34;pageSize&#34; &#34;requiredmeta&#34; &#34;requiredMeta&#34; -}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- range $key, $val := . -}}
+</span></span><span class="line"><span class="cl">    {{- if ne $val nil -}}
+</span></span><span class="line"><span class="cl">        {{- $k := index $replaceKeys $key | default $key -}}
+</span></span><span class="line"><span class="cl">        {{- if eq $k &#34;reaction&#34; -}}
+</span></span><span class="line"><span class="cl">            {{- $config = merge $config (dict $k (cond $showReaction $val false)) -}}
+</span></span><span class="line"><span class="cl">        {{- else -}}
+</span></span><span class="line"><span class="cl">            {{- $config = merge $config (dict $k $val) -}}
+</span></span><span class="line"><span class="cl">        {{- end -}}
+</span></span><span class="line"><span class="cl">    {{- end -}}
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">import</span> <span class="p">{</span> <span class="nx">init</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;https://unpkg.com/@waline/client@v3/dist/waline.js&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">init</span><span class="p">({{</span> <span class="nx">$config</span> <span class="o">|</span> <span class="nx">jsonify</span> <span class="o">|</span> <span class="nx">safeJS</span> <span class="p">}});</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{- end -}}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>‍</p>
+<h3>添加waline的css文件<span class="hx:absolute hx:-mt-20" id="添加waline的css文件"></span>
+    <a href="#%e6%b7%bb%e5%8a%a0waline%e7%9a%84css%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>由于waline的非默认样式没有那么华丽，所以可以通过添加css代码来自己优化一些格式，例如，外观跟随明亮主题和暗黑主题变化，或者是一些简单的动效等等。</p>
+<p>文件分享，可以嵌入上面的wline.html中，也可以在hextra/assets/css/custom.css中添加这段代码来美化格式，这一段css的主要功能就是跟随主题变化，和简单动效。</p>
+<p><a href="https://gist.github.com/whynerve/96d750f09b32a94c0bed247a11950a98"target="_blank" rel="noopener">https://gist.github.com/whynerve/96d750f09b32a94c0bed247a11950a98</a></p>
+<p>‍</p>
+<h1>4.运行hugo，查看效果</h1><p>登录和使用，第一个登录的用户会变成管理员，通过管理员可以指定其它用户为管理员，以及删除和管理评论。</p>
+<p>‍</p>
+<p>‍</p>
+
       </div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/blog/scgpt/"
-        title="scGPT学习日记"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >scGPT学习日记<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        href="/blog/gemini-free-prostitution/"
+        title="Gemini 白嫖"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Gemini 白嫖</a></div>
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
 <div id="waline" class="hx-mt-8"></div><script type="module">
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
@@ -629,7 +714,7 @@
         
         <li class="hx:flex hx:flex-col">
           <a
-            href="/blog/clashtool/"
+            href="/blog/20251220hugo-adds-waline-comment-function-record-z1sirkt/"
             class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
           >简体中文<span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></a>
         </li>
