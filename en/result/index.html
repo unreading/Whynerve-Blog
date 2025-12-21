@@ -35,8 +35,8 @@
   <meta name="twitter:title" content="Show Something">
   <meta name="twitter:description" content="A page to showcase something.">
 
-    <link rel="preload" href="/css/compiled/main.min.c10764b3a4bcaf23913215c8ae729a21a192cd841e759eeac790e1d8a5c86708.css" as="style" integrity="sha256-wQdks6S8ryORMhXIrnKaIaGSzYQedZ7qx5Dh2KXIZwg=" />
-    <link href="/css/compiled/main.min.c10764b3a4bcaf23913215c8ae729a21a192cd841e759eeac790e1d8a5c86708.css" rel="stylesheet" integrity="sha256-wQdks6S8ryORMhXIrnKaIaGSzYQedZ7qx5Dh2KXIZwg=" />
+    <link rel="preload" href="/css/compiled/main.min.6c860941527316c3c8a2cd94ab9db5d670b964de8eea24e2b34b420007780040.css" as="style" integrity="sha256-bIYJQVJzFsPIos2Uq5211nC5ZN6O6iTis0tCAAd4AEA=" />
+    <link href="/css/compiled/main.min.6c860941527316c3c8a2cd94ab9db5d670b964de8eea24e2b34b420007780040.css" rel="stylesheet" integrity="sha256-bIYJQVJzFsPIos2Uq5211nC5ZN6O6iTis0tCAAd4AEA=" />
 
   
 
@@ -69,26 +69,26 @@
   title=""
   href="/en/blog"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
-><span class="hx:text-center">博客</span>
+  class="hx:text-sm nav-anim-trigger hx:contrast-more:text-gray-700 ... (原有class保持不变) ... hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center nav-text-underline-anim">博客</span>
 </a><a
   title=""
   href="/en/docs"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
-><span class="hx:text-center">文档</span>
+  class="hx:text-sm nav-anim-trigger hx:contrast-more:text-gray-700 ... (原有class保持不变) ... hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center nav-text-underline-anim">文档</span>
 </a><a
   title=""
   href="/en/result"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
-><span class="hx:text-center">成果</span>
+  class="hx:text-sm nav-anim-trigger hx:contrast-more:text-gray-700 ... (原有class保持不变) ... hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center nav-text-underline-anim">成果</span>
 </a><a
   title=""
   href="/en/about"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
-><span class="hx:text-center">关于</span>
+  class="hx:text-sm nav-anim-trigger hx:contrast-more:text-gray-700 ... (原有class保持不变) ... hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center nav-text-underline-anim">关于</span>
 </a><div class="hextra-search-wrapper hx:relative hx:md:w-64">
   <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
     <input
@@ -313,7 +313,35 @@
     
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents"></nav>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const backToTopBtn = document.getElementById('backToTop');
+    const scrollToBottomBtn = document.getElementById('scrollToBottom');
 
+    function handleScrollButtons() {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      if (scrollY > 300) {
+        backToTopBtn.classList.remove('hx:opacity-0', 'hx:max-h-0', 'hx:mt-0', 'hx:py-0');
+        backToTopBtn.classList.add('hx:opacity-100', 'hx:max-h-8', 'hx:mt-2');
+      } else {
+        backToTopBtn.classList.remove('hx:opacity-100', 'hx:max-h-8', 'hx:mt-2');
+        backToTopBtn.classList.add('hx:opacity-0', 'hx:max-h-0', 'hx:mt-0', 'hx:py-0');
+      }
+
+      if ((scrollY + windowHeight) >= (documentHeight - 50)) {
+        scrollToBottomBtn.classList.add('hx:opacity-0', 'hx:pointer-events-none');
+      } else {
+        scrollToBottomBtn.classList.remove('hx:opacity-0', 'hx:pointer-events-none');
+      }
+    }
+
+    window.addEventListener('scroll', handleScrollButtons);
+    handleScrollButtons();
+  });
+</script>
     <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
       <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
         
@@ -345,7 +373,7 @@
   </a></div></div>
     </div></footer>
     
-    <script defer src="/js/main.min.7f3812f6ceed78c182aa7f5c9b82090941d04f81287fd598043d6c31e22b9c6e.js" integrity="sha256-fzgS9s7teMGCqn9cm4IJCUHQT4Eof9WYBD1sMeIrnG4="></script>
+    <script defer src="/js/main.min.27c480854ce5eefe9ae84e1e9340747c92e1ee5621a4a28c1108dc33e12c58e8.js" integrity="sha256-J8SAhUzl7v6a6E4ek0B0fJLh7lYhpKKMEQjcM&#43;EsWOg="></script>
 <script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
         <script defer src="/en.search.min.097e3a24da0aba2ac82ef0f53e82e1500343a7126260a0203f3a45bbe0876093.js" integrity="sha256-CX46JNoKuirILvD1PoLhUANDpxJiYKAgPzpFu&#43;CHYJM="></script>
   </body>

@@ -23,7 +23,8 @@
       <description>
         
         
-        &lt;h1&gt;1.背景介绍&lt;/h1&gt;&lt;ul&gt;
+        &lt;h1&gt;1.背景介绍&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1背景介绍&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1%e8%83%8c%e6%99%af%e4%bb%8b%e7%bb%8d&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;首先我使用的是Hugo的Hextra主题构建的博客网站&lt;/p&gt;
 &lt;/li&gt;
@@ -36,16 +37,17 @@
 &lt;p&gt;&lt;a href=&#34;https://hugo.opendocs.io/content-management/comments/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;评论 | Hugo官方文档&lt;/a&gt; | &lt;a href=&#34;https://waline.js.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Waline | Waline&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;2.Waline部署&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2waline部署&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#2waline%e9%83%a8%e7%bd%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;1.Waline部署&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1waline部署&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#1waline%e9%83%a8%e7%bd%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;参考官方文档，简单易上手，用心看一遍，该懂的都懂了。&lt;/p&gt;
+&lt;h1&gt;2.Waline部署&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2waline部署&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2waline%e9%83%a8%e7%bd%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h2&gt;2.1 Waline部署&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;21-waline部署&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#21-waline%e9%83%a8%e7%bd%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;参考官方文档，简单易上手，用心看一遍，该懂的都懂了。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://waline.js.org/guide/get-started/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;快速上手 | Waline&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;2.绑定域名（可选）&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2绑定域名可选&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#2%e7%bb%91%e5%ae%9a%e5%9f%9f%e5%90%8d%e5%8f%af%e9%80%89&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;官方文档里的绑定域名的方法，不知道是现在需要修改还是如何，不能只填写CNAME，需要按照vercel的规定，绑定域名时会出现，一键绑定按钮。&lt;/p&gt;
+&lt;h2&gt;2.2 绑定域名（可选）&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;22-绑定域名可选&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#22-%e7%bb%91%e5%ae%9a%e5%9f%9f%e5%90%8d%e5%8f%af%e9%80%89&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;官方文档里的绑定域名的方法，不知道是现在需要修改还是如何，不能只填写CNAME，需要按照vercel的规定，绑定域名时会出现，一键绑定按钮。&lt;/p&gt;
 &lt;p&gt;！！！先在vercel中添加域名，然后点击一键绑定会自动跳转到域名托管的DNS平台，之后验证就可以了。&lt;/p&gt;
 &lt;p&gt;如果是cloudflare平台托管域名，那么添加DNS的页面如下：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://whynerve.me/images/image-20251220232636-y9h1vm1.png&#34; alt=&#34;image&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h1&gt;3.梳理结构&lt;/h1&gt;&lt;p&gt;对于我这样的小白来说，本来对于hugo本身的结构就不清楚，但是可以使用ai直接分析github项目，例如Google gemini就有导入github代码库的功能。或者使用vibe coding，claude code router驱动的使用GLM的claude code等来分析hugo项目的结构，不同的主题可能不同。&lt;/p&gt;
+&lt;h1&gt;3.梳理结构&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;3梳理结构&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3%e6%a2%b3%e7%90%86%e7%bb%93%e6%9e%84&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;对于我这样的小白来说，本来对于hugo本身的结构就不清楚，但是可以使用ai直接分析github项目，例如Google gemini就有导入github代码库的功能。或者使用vibe coding，claude code router驱动的使用GLM的claude code等来分析hugo项目的结构，不同的主题可能不同。&lt;/p&gt;
 &lt;p&gt;这里是关于hextra主题的结构，首先我找到了，作者内置的评论功能相关的文件，分别是：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;hextra/layouts/partials/components/comments.html&lt;/li&gt;
@@ -180,7 +182,8 @@
 &lt;p&gt;文件分享，可以嵌入上面的wline.html中，也可以在hextra/assets/css/custom.css中添加这段代码来美化格式，这一段css的主要功能就是跟随主题变化，和简单动效。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gist.github.com/whynerve/96d750f09b32a94c0bed247a11950a98&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;custom.css(waline主题部分)&amp;ndash;gists代码&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
-&lt;h1&gt;4.运行hugo、查看效果&lt;/h1&gt;&lt;p&gt;登录和使用，第一个登录的用户会变成管理员，通过管理员可以指定其它用户为管理员，以及删除和管理评论。&lt;/p&gt;
+&lt;h1&gt;4.运行hugo、查看效果&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4运行hugo查看效果&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4%e8%bf%90%e8%a1%8chugo%e6%9f%a5%e7%9c%8b%e6%95%88%e6%9e%9c&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;登录和使用，第一个登录的用户会变成管理员，通过管理员可以指定其它用户为管理员，以及删除和管理评论。&lt;/p&gt;
 &lt;p&gt;查看主题是否与自己预期相同，如果不同，可以在浏览器使用F12打开开发者工具，然后使用元素查看工具，一个个改代码，并不难，只是需要花费一些时间。&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
@@ -197,12 +200,14 @@
       <description>
         
         
-        &lt;h1&gt;注意事项&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://whynerve.me/images/image-20251121160914-rvknkid.png&#34; alt=&#34;image&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+        &lt;h1&gt;注意事项&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;注意事项&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://whynerve.me/images/image-20251121160914-rvknkid.png&#34; alt=&#34;image&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;使用Gemini数据可能被谷歌使用，需要知道！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;人工搭建一个属于自己的本地ai大模型，和保留属于自己的数据还是比较重要的，&lt;strong&gt;我觉得这是未来的一个小风口，类似于nas一样。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;首先，想办法搭建一个属于自己的本地大模型，找到其能用于辅助代码写作和性能的最佳交叉。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://whynerve.me/images/image-20251129132324-6x5zfu2.png&#34; alt=&#34;image&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h1&gt;1. 具备的条件&lt;/h1&gt;&lt;ol&gt;
+&lt;h1&gt;1. 具备的条件&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-具备的条件&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e5%85%b7%e5%a4%87%e7%9a%84%e6%9d%a1%e4%bb%b6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;合适的节点&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;这一个需要看自己购买节点是否纯净，可以多试试。&lt;/p&gt;
@@ -214,7 +219,8 @@
 &lt;li&gt;&lt;strong&gt;通过ai工具和网上他人攻略构建合理身份&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;需要构建一个合理的身份，考虑到可能审核人员都来自欧美以及我被拒绝过多心灰意冷，所以我&lt;/p&gt;
-&lt;h1&gt;2. 开始实施&lt;/h1&gt;&lt;ol&gt;
+&lt;h1&gt;2. 开始实施&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2-开始实施&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e5%bc%80%e5%a7%8b%e5%ae%9e%e6%96%bd&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;浏览器无痕模式&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;登录有资格的谷歌账号（刚开始我的账号都没有资格于是选择），选择合适的节点&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;第一次审核（11.12）&lt;/strong&gt;  
@@ -251,7 +257,8 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;‍&lt;/p&gt;
-&lt;h1&gt;3.关键页面图片&lt;/h1&gt;&lt;h2&gt;节点正确页面。&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;节点正确页面&#34;&gt;&lt;/span&gt;
+&lt;h1&gt;3.关键页面图片&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;3关键页面图片&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3%e5%85%b3%e9%94%ae%e9%a1%b5%e9%9d%a2%e5%9b%be%e7%89%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h2&gt;节点正确页面。&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;节点正确页面&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#%e8%8a%82%e7%82%b9%e6%ad%a3%e7%a1%ae%e9%a1%b5%e9%9d%a2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://whynerve.me/images/image-20251121162237-375s31w.png&#34; alt=&#34;image&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2&gt;有资格页面&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;有资格页面&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#%e6%9c%89%e8%b5%84%e6%a0%bc%e9%a1%b5%e9%9d%a2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;没有资格&lt;br&gt;
@@ -268,7 +275,8 @@
 &lt;h2&gt;成功订阅&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;成功订阅&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#%e6%88%90%e5%8a%9f%e8%ae%a2%e9%98%85&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://whynerve.me/images/Gemini%e6%88%90%e5%8a%9f%e8%ae%a2%e9%98%85-20251121162614-emyn3e1.png&#34; alt=&#34;Gemini成功订阅&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2&gt;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h1&gt;4.参考资料&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=e2OBaYIjcK8&amp;amp;t=2s&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;免费获得谷歌AI大礼包一年 | Gemini高级版 | Google One 2TB空间| Google AI Pro | SheerID验证方法&lt;/a&gt;&lt;/p&gt;
+    &lt;a href=&#34;#&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h1&gt;4.参考资料&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4参考资料&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=e2OBaYIjcK8&amp;amp;t=2s&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;免费获得谷歌AI大礼包一年 | Gemini高级版 | Google One 2TB空间| Google AI Pro | SheerID验证方法&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;根据视频，可以看自己卡在哪里，但是其中方法已经陈旧参考我的文档。&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
 
@@ -425,13 +433,15 @@
       <description>
         
         
-        &lt;h1&gt;1.简介&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/SaladDay/clash-for-lab/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SaladDay/clash-for-lab: ⚡ Clash for Lab 是为实验室环境设计的科学上网工具，无需sudo权限，优雅地一键式脚本安装&lt;/a&gt;&lt;/p&gt;
+        &lt;h1&gt;1.简介&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1简介&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1%e7%ae%80%e4%bb%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/SaladDay/clash-for-lab/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SaladDay/clash-for-lab: ⚡ Clash for Lab 是为实验室环境设计的科学上网工具，无需sudo权限，优雅地一键式脚本安装&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;可以不需要sudo权限的,mihomo内核的linux版本clash，也是基于另一个优雅版本的分支库。&lt;/p&gt;
 &lt;p&gt;就是这个：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/nelvko/clash-for-linux-install&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;nelvko/clash-for-linux-install: 😼 优雅地使用基于 clash/mihomo 的代理环境&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;而基于此，我又构建了一个属于自己的版本：
 &lt;a href=&#34;https://github.com/unreading/clash-for-lab-customization#&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;unreading/clash-for-lab-customization: ⚡ Clash for Lab 是为实验室环境设计的科学上网工具，无需sudo权限，优雅地一键式脚本安装&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;2.安装流程和注意使用&lt;/h1&gt;&lt;h4&gt;1. 克隆项目&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-克隆项目&#34;&gt;&lt;/span&gt;
+&lt;h1&gt;2.安装流程和注意使用&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2安装流程和注意使用&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2%e5%ae%89%e8%a3%85%e6%b5%81%e7%a8%8b%e5%92%8c%e6%b3%a8%e6%84%8f%e4%bd%bf%e7%94%a8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h4&gt;1. 克隆项目&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-克隆项目&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#1-%e5%85%8b%e9%9a%86%e9%a1%b9%e7%9b%ae&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://kkgithub.com/unreading/clash-for-lab-customization.git
