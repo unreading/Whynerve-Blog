@@ -15,16 +15,14 @@
     
     <item>
       <title>Hugo添加Waline评论功能记录</title>
-      <link>https://whynerve.me/blog/20251220hugo-adds-waline-comment-function-record-z1sirkt/</link>
+      <link>https://whynerve.me/blog/20251220_hugo-waline-comment/</link>
       <pubDate>Sat, 20 Dec 2025 20:16:30 +0800</pubDate>
       
-      <guid>https://whynerve.me/blog/20251220hugo-adds-waline-comment-function-record-z1sirkt/</guid>
+      <guid>https://whynerve.me/blog/20251220_hugo-waline-comment/</guid>
       <description>
         
         
-        &lt;h1&gt;Hugo添加Waline评论功能记录&lt;/h1&gt;&lt;p&gt;简介:&lt;/p&gt;
-&lt;p&gt;本来想通过主题的内置功能，后来发现没有Waline的借口，Hextra主题目前版本只有内置的Giscus，所以自己摸索了一下。&lt;/p&gt;
-&lt;h1&gt;1.背景介绍&lt;/h1&gt;&lt;ul&gt;
+        &lt;h1&gt;1.背景介绍&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;首先我使用的是Hugo的Hextra主题构建的博客网站&lt;/p&gt;
 &lt;/li&gt;
@@ -37,11 +35,10 @@
 &lt;p&gt;&lt;a href=&#34;https://hugo.opendocs.io/content-management/comments/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;评论 | Hugo官方文档&lt;/a&gt; | &lt;a href=&#34;https://waline.js.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Waline | Waline&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;‍&lt;/p&gt;
-&lt;h1&gt;2.Waline部署&lt;/h1&gt;&lt;h3&gt;1.Waline部署&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1waline部署&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#1waline%e9%83%a8%e7%bd%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;参考官方文档，简单易上手，用心看一遍，该懂的都懂了。&lt;/p&gt;
+&lt;h2&gt;2.Waline部署&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2waline部署&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2waline%e9%83%a8%e7%bd%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;1.Waline部署&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1waline部署&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1waline%e9%83%a8%e7%bd%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;参考官方文档，简单易上手，用心看一遍，该懂的都懂了。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://waline.js.org/guide/get-started/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;快速上手 | Waline&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;‍&lt;/p&gt;
 &lt;h3&gt;2.绑定域名（可选）&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2绑定域名可选&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#2%e7%bb%91%e5%ae%9a%e5%9f%9f%e5%90%8d%e5%8f%af%e9%80%89&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;官方文档里的绑定域名的方法，不知道是现在需要修改还是如何，不能只填写CNAME，需要按照vercel的规定，绑定域名时会出现，一键绑定按钮。&lt;/p&gt;
 &lt;p&gt;！！！先在vercel中添加域名，然后点击一键绑定会自动跳转到域名托管的DNS平台，之后验证就可以了。&lt;/p&gt;
@@ -54,16 +51,16 @@
 &lt;li&gt;hextra/layouts/partials/components/giscus.html&lt;/li&gt;
 &lt;li&gt;hextra/layouts/single.html&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;2.1文件功能&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;21文件功能&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#21%e6%96%87%e4%bb%b6%e5%8a%9f%e8%83%bd&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;h2&gt;3.1 文件功能&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;31-文件功能&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#31-%e6%96%87%e4%bb%b6%e5%8a%9f%e8%83%bd&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;在comments.html中作者主要规定了，comments参数默认是false，同时只有type是giscus的借口才接受。&lt;/li&gt;
 &lt;li&gt;giscus.html文件，就是对于giscus的设置，这个自己可以查看之前的文档，和通过ai解读一下。&lt;/li&gt;
 &lt;li&gt;single.html文件，将comments放在了规定的某些的页面的尾部。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;2.2修改文件&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;22修改文件&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#22%e4%bf%ae%e6%94%b9%e6%96%87%e4%bb%b6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;根据上面的原本的文件结构，自然而然就需要修改这些文件来添加waline的借口，在此之前，需要先完成waline的托管注册。&lt;/p&gt;
-&lt;h3&gt;增加Waline类型&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;增加waline类型&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#%e5%a2%9e%e5%8a%a0waline%e7%b1%bb%e5%9e%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;在comments.html中增加Waline类型：&lt;br&gt;
+&lt;h2&gt;3.2 修改文件&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;32-修改文件&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#32-%e4%bf%ae%e6%94%b9%e6%96%87%e4%bb%b6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;根据上面的原本的文件结构，自然而然就需要修改这些文件来添加waline的借口，在此之前，需要先完成waline的托管注册。&lt;/p&gt;
+&lt;h3&gt;a.增加Waline类型&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;a增加waline类型&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#a%e5%a2%9e%e5%8a%a0waline%e7%b1%bb%e5%9e%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;在comments.html中增加Waline类型：&lt;br&gt;
 修改后的文件&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
@@ -104,8 +101,8 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;‍&lt;/p&gt;
-&lt;h3&gt;修改yaml文件&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;修改yaml文件&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#%e4%bf%ae%e6%94%b9yaml%e6%96%87%e4%bb%b6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;在配置文件中，这里是hugo.yaml中添加对应的参数：&lt;/p&gt;
+&lt;h3&gt;b.修改yaml文件&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;b修改yaml文件&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#b%e4%bf%ae%e6%94%b9yaml%e6%96%87%e4%bb%b6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;在配置文件中，这里是hugo.yaml中添加对应的参数：&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;comments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -124,8 +121,8 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;增加waline.html文件&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;增加walinehtml文件&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#%e5%a2%9e%e5%8a%a0walinehtml%e6%96%87%e4%bb%b6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;在comments.html添加了这一段代码&lt;/p&gt;
+&lt;h3&gt;c.增加waline.html文件&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;c增加walinehtml文件&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#c%e5%a2%9e%e5%8a%a0walinehtml%e6%96%87%e4%bb%b6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;在comments.html添加了这一段代码&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  {{- else if eq site.Params.comments.type &amp;#34;waline&amp;#34; -}} {{/* 新增部分 */}}
@@ -177,12 +174,13 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;‍&lt;/p&gt;
-&lt;h3&gt;添加waline的css文件&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;添加waline的css文件&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#%e6%b7%bb%e5%8a%a0waline%e7%9a%84css%e6%96%87%e4%bb%b6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;由于waline的非默认样式没有那么华丽，所以可以通过添加css代码来自己优化一些格式，例如，外观跟随明亮主题和暗黑主题变化，或者是一些简单的动效等等。&lt;/p&gt;
+&lt;h3&gt;d.添加waline的css文件&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;d添加waline的css文件&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#d%e6%b7%bb%e5%8a%a0waline%e7%9a%84css%e6%96%87%e4%bb%b6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;由于waline的非默认样式没有那么华丽，所以可以通过添加css代码来自己优化一些格式，例如，外观跟随明亮主题和暗黑主题变化，或者是一些简单的动效等等。&lt;/p&gt;
 &lt;p&gt;文件分享，可以嵌入上面的wline.html中，也可以在hextra/assets/css/custom.css中添加这段代码来美化格式，这一段css的主要功能就是跟随主题变化，和简单动效。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://gist.github.com/whynerve/96d750f09b32a94c0bed247a11950a98&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://gist.github.com/whynerve/96d750f09b32a94c0bed247a11950a98&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/whynerve/96d750f09b32a94c0bed247a11950a98&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;custom.css(waline主题部分)&amp;ndash;gists代码&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
-&lt;h1&gt;4.运行hugo，查看效果&lt;/h1&gt;&lt;p&gt;登录和使用，第一个登录的用户会变成管理员，通过管理员可以指定其它用户为管理员，以及删除和管理评论。&lt;/p&gt;
+&lt;h1&gt;4.运行hugo、查看效果&lt;/h1&gt;&lt;p&gt;登录和使用，第一个登录的用户会变成管理员，通过管理员可以指定其它用户为管理员，以及删除和管理评论。&lt;/p&gt;
+&lt;p&gt;查看主题是否与自己预期相同，如果不同，可以在浏览器使用F12打开开发者工具，然后使用元素查看工具，一个个改代码，并不难，只是需要花费一些时间。&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
 
@@ -191,10 +189,10 @@
     
     <item>
       <title>Gemini 白嫖</title>
-      <link>https://whynerve.me/blog/gemini-free-prostitution/</link>
+      <link>https://whynerve.me/blog/20251121_gemini-free/</link>
       <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://whynerve.me/blog/gemini-free-prostitution/</guid>
+      <guid>https://whynerve.me/blog/20251121_gemini-free/</guid>
       <description>
         
         
@@ -278,10 +276,10 @@
     
     <item>
       <title>scGPT学习日记</title>
-      <link>https://whynerve.me/blog/scgpt/</link>
+      <link>https://whynerve.me/blog/20250815_scgpt/</link>
       <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://whynerve.me/blog/scgpt/</guid>
+      <guid>https://whynerve.me/blog/20250815_scgpt/</guid>
       <description>
         
         
@@ -419,10 +417,10 @@
     
     <item>
       <title>Clash的工具再修改</title>
-      <link>https://whynerve.me/blog/clashtool/</link>
+      <link>https://whynerve.me/blog/20241208_clashtool/</link>
       <pubDate>Sun, 08 Dec 2024 10:00:00 +0800</pubDate>
       
-      <guid>https://whynerve.me/blog/clashtool/</guid>
+      <guid>https://whynerve.me/blog/20241208_clashtool/</guid>
       <description>
         
         
