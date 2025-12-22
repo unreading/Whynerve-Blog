@@ -38,8 +38,8 @@
   <meta name="twitter:description" content="这是主题文档布局的演示。
 你好，世界！ main.gopackage main import &#34;fmt&#34; func main() { fmt.Println(&#34;Hello, World!&#34;) }">
 
-    <link rel="preload" href="/css/compiled/main.min.3bb94de70f583b32695c33f6713f5e0347ae0e6735a17b21adbe8bb327a44aae.css" as="style" integrity="sha256-O7lN5w9YOzJpXDP2cT9eA0euDmc1oXshrb6LsyekSq4=" />
-    <link href="/css/compiled/main.min.3bb94de70f583b32695c33f6713f5e0347ae0e6735a17b21adbe8bb327a44aae.css" rel="stylesheet" integrity="sha256-O7lN5w9YOzJpXDP2cT9eA0euDmc1oXshrb6LsyekSq4=" />
+    <link rel="preload" href="/css/compiled/main.min.2e957ef47d9e6e454c9cbf33da4b5a5410f706d01b62910bc831dca5e7c8f1a2.css" as="style" integrity="sha256-LpV&#43;9H2ebkVMnL8z2ktaVBD3BtAbYpELyDHcpefI8aI=" />
+    <link href="/css/compiled/main.min.2e957ef47d9e6e454c9cbf33da4b5a5410f706d01b62910bc831dca5e7c8f1a2.css" rel="stylesheet" integrity="sha256-LpV&#43;9H2ebkVMnL8z2ktaVBD3BtAbYpELyDHcpefI8aI=" />
 
   
 
@@ -491,32 +491,44 @@
   
 
 </aside>
-    
-<nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">本页目录</p>
+    <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4">
+        <div class="hx:mb-4 hx:flex hx:items-center hx:justify-between">
+            <p class="hx:font-semibold hx:tracking-tight">本页目录</p>
+            
+            
+            <button id="toc-global-toggle" onclick="toggleGlobalToc()" class="hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-transform hx:duration-200" title="Fold/Unfold All">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="hx:w-4 hx:h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+        </div>
+        
+        <ul class="hx:pb-6" id="toc-list"><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
         
         
-        <ul class="hx:pb-6">
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%bd%a0%e5%a5%bd%e4%b8%96%e7%95%8c">你好，世界！
+        <a class="hx:flex hx:items-start hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
+           href="#%e4%bd%a0%e5%a5%bd%e4%b8%96%e7%95%8c"
+           style="padding-left: 1rem;">
+          
+          <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
+
+          <span class="hextra-toc-text hx:flex-1">你好，世界！
+          </span>
         </a>
-      </li></ul>
-      <div class="hx:mt-4 hx:border-t hx:bg-white hx:pt-0 hx:shadow-[0_-12px_16px_white] toc-footer-container hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
-        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:transition-all hx:duration-300 hx:ease-in-out hx:overflow-hidden hx:opacity-0 hx:max-h-0 hx:py-0 hx:mt-0 hx:cursor-pointer hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+      </li></ul><div class="hx:mt-4 hx:border-t hx:bg-white hx:pt-0 hx:shadow-[0_-12px_16px_white] toc-footer-container hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:transition-all hx:duration-300 hx:ease-in-out hx:overflow-hidden hx:opacity-0 hx:max-h-0 hx:py-0 hx:mt-0 hx:cursor-pointer hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>回到顶部</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
           </svg>
         </button>
 
-        
         <button aria-hidden="true" id="scrollToBottom" onClick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });" class="hx:mt-2 hx:cursor-pointer hx:transition-all hx:duration-300 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>去到底部</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>
         </button>
-
       </div>
     </div>
   </nav>
@@ -549,26 +561,126 @@
     window.addEventListener('scroll', handleScrollButtons);
     handleScrollButtons();
   });
-</script>
 
+  
+  let isGlobalCollapsed = false;
+
+  function toggleGlobalToc() {
+    isGlobalCollapsed = !isGlobalCollapsed;
+    const btn = document.getElementById('toc-global-toggle');
+    const list = document.getElementById('toc-list');
+    const allItems = list.querySelectorAll('li[data-level]');
+    
+    
+    
+    
+    btn.style.transform = isGlobalCollapsed ? 'rotate(180deg)' : 'rotate(0deg)';
+    
+    allItems.forEach(item => {
+      const level = parseInt(item.getAttribute('data-level'));
+      const arrow = item.querySelector('.toc-arrow');
+      
+      if (isGlobalCollapsed) {
+        if (level > 0) item.style.display = 'none';
+        if (level === 0 && arrow) arrow.classList.add('collapsed');
+      } else {
+        item.style.display = 'block';
+        if (arrow) arrow.classList.remove('collapsed');
+      }
+    });
+  }
+
+  
+  function toggleLevel(e, btn) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const currentLi = btn.closest('li');
+    const currentLevel = parseInt(currentLi.getAttribute('data-level'));
+    let nextLi = currentLi.nextElementSibling;
+    
+    const isCollapsing = !btn.classList.contains('collapsed');
+    btn.classList.toggle('collapsed');
+    
+    while (nextLi) {
+      const nextLevelStr = nextLi.getAttribute('data-level');
+      if (!nextLevelStr) break; 
+      const nextLevel = parseInt(nextLevelStr);
+      if (nextLevel <= currentLevel) break;
+      
+      if (isCollapsing) {
+        nextLi.style.display = 'none';
+      } 
+      nextLi = nextLi.nextElementSibling;
+    }
+    
+    if (!isCollapsing) {
+       let tempLi = currentLi.nextElementSibling;
+       let blockedLevel = 999;
+       
+       while (tempLi) {
+          const lvl = parseInt(tempLi.getAttribute('data-level'));
+          if (lvl <= currentLevel) break; 
+
+          if (lvl > blockedLevel) {
+             tempLi.style.display = 'none';
+          } else {
+             tempLi.style.display = 'block';
+             const arrow = tempLi.querySelector('.toc-arrow');
+             if (arrow && arrow.classList.contains('collapsed')) {
+                blockedLevel = lvl; 
+             } else {
+                blockedLevel = 999; 
+             }
+          }
+          tempLi = tempLi.nextElementSibling;
+       }
+    }
+  }
+</script>
 
 <style>
   html.dark .toc-footer-container {
-     
     background-color: var(--custom-dark-bg) !important;
-     
     box-shadow: 0 -12px 16px var(--custom-dark-bg) !important;
     border-top-color: #333 !important;
   }
   
+  html.dark #backToTop, html.dark #scrollToBottom { color: #a0a0a0; }
+  html.dark #backToTop:hover, html.dark #scrollToBottom:hover { color: #ffffff; }
+
    
-  html.dark #backToTop, 
-  html.dark #scrollToBottom {
-    color: #a0a0a0;
+  .toc-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25em;
+    height: 1.25em;
+    margin-right: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    opacity: 0.6;
+    color: inherit;
   }
-  html.dark #backToTop:hover, 
-  html.dark #scrollToBottom:hover {
-    color: #ffffff;
+  .toc-arrow:hover {
+    background-color: rgba(0,0,0,0.05);
+    opacity: 1;
+    color: var(--waline-theme-color, #3b82f6);
+  }
+  html.dark .toc-arrow:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+
+   
+  .toc-arrow svg {
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+  }
+  
+   
+  .toc-arrow.collapsed svg {
+    transform: rotate(-90deg);
   }
 </style>
     <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
@@ -650,7 +762,7 @@
     </div></footer>
     
 
-    <script defer src="/js/main.min.d76b8879539e4ef8ed20c0202a586091b428329e6bbec2510766aa577cdd3bf7.js" integrity="sha256-12uIeVOeTvjtIMAgKlhgkbQoMp5rvsJRB2aqV3zdO/c="></script>
+    <script defer src="/js/main.min.1303b1bea7a4fe0b239b529a0aeb975fa763568054f55e17e98e3993557cc762.js" integrity="sha256-EwOxvqek/gsjm1KaCuuXX6djVoBU9V4X6Y45k1V8x2I="></script>
 <script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
         <script defer src="/zh-cn.search.min.ab56a95db0578872aef5cc3c7f439c056dba42c40fc48960b644d1829857d986.js" integrity="sha256-q1apXbBXiHKu9cw8f0OcBW26QsQPxIlgtkTRgphX2YY="></script>
   
