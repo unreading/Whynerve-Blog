@@ -8,38 +8,41 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>对滴 – 为什么神经</title>
-  <meta name="description" content="反正就是依然可以。" /><link rel="canonical" href="https://whynerve.me/docs/folder/third/forth/fifth/right/" itemprop="url" />
+<title>R语言环境构建 – 为什么神经</title>
+  <meta name="description" content="R语言环境构建" /><link rel="canonical" href="https://whynerve.me/post/r-language-environment-construction.html" itemprop="url" />
 
-<meta property="og:title" content="对滴">
+<meta property="og:title" content="R语言环境构建">
 <meta
   property="og:description"
   content="
-    
-      反正就是依然可以。
-    
+    R语言环境构建
   ">
 <meta
   property="og:type"
   content="
     article
   ">
-<meta property="og:url" content="https://whynerve.me/docs/folder/third/forth/fifth/right/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://whynerve.me/post/r-language-environment-construction.html"><meta property="article:section" content="blog">
+
+<meta
+  property="article:published_time"
+  content="2026-01-07T14:41:35+08:00">
 
 
 <meta
   property="article:modified_time"
-  content="2025-12-07T23:07:09+08:00">
+  content="2026-01-07T14:42:15+08:00">
 
 
 
-  <meta itemprop="name" content="对滴">
-  <meta itemprop="description" content="反正就是依然可以。">
-  <meta itemprop="dateModified" content="2025-12-07T23:07:09+08:00">
-  <meta itemprop="wordCount" content="1">
+  <meta itemprop="name" content="R语言环境构建">
+  <meta itemprop="description" content="R语言环境构建">
+  <meta itemprop="datePublished" content="2026-01-07T14:41:35+08:00">
+  <meta itemprop="dateModified" content="2026-01-07T14:42:15+08:00">
+  <meta itemprop="wordCount" content="1065">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="对滴">
-  <meta name="twitter:description" content="反正就是依然可以。">
+  <meta name="twitter:title" content="R语言环境构建">
+  <meta name="twitter:description" content="R语言环境构建">
 
     <link rel="preload" href="/css/compiled/main.min.2e957ef47d9e6e454c9cbf33da4b5a5410f706d01b62910bc831dca5e7c8f1a2.css" as="style" integrity="sha256-LpV&#43;9H2ebkVMnL8z2ktaVBD3BtAbYpELyDHcpefI8aI=" />
     <link href="/css/compiled/main.min.2e957ef47d9e6e454c9cbf33da4b5a5410f706d01b62910bc831dca5e7c8f1a2.css" rel="stylesheet" integrity="sha256-LpV&#43;9H2ebkVMnL8z2ktaVBD3BtAbYpELyDHcpefI8aI=" />
@@ -77,13 +80,13 @@
   title=""
   href="/blog"
   
-  class="hx:text-sm nav-anim-trigger hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+  class="hx:text-sm nav-anim-trigger hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
 ><span class="hx:text-center nav-text-underline-anim">博客</span>
 </a><a
   title=""
   href="/docs"
   
-  class="hx:text-sm nav-anim-trigger hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
+  class="hx:text-sm nav-anim-trigger hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
 ><span class="hx:text-center nav-text-underline-anim">文档</span>
 </a><a
   title=""
@@ -141,7 +144,7 @@
           
           <li class="hx:flex hx:flex-col">
             <a
-              href="/docs/folder/third/forth/fifth/right/"
+              href="/post/r-language-environment-construction.html"
               class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
             >简体中文<span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></a>
           </li>
@@ -149,7 +152,7 @@
           
           <li class="hx:flex hx:flex-col">
             <a
-              href="/en/docs/folder/third/forth/fifth/right/"
+              href="/en/"
               class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
             >English</a>
           </li>
@@ -229,8 +232,8 @@
     <button type="button" aria-label="Menu" class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-2 hx:rounded-sm hx:p-2 hx:active:bg-gray-400/20 hx:md:hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
   </nav>
 </div>
-  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
-    <aside class="hextra-sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-16 hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:sticky">
+<div class="hx:mx-auto hx:flex hextra-max-page-width">
+  <aside class="hextra-sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-16 hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:hidden hx:xl:block">
   <div class="hx:px-4 hx:pt-4 hx:md:hidden">
     <div class="hextra-search-wrapper hx:relative hx:md:w-64">
   <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
@@ -260,7 +263,7 @@
   <div class="hextra-scrollbar hx:overflow-y-auto hx:overflow-x-hidden hx:p-4 hx:grow hx:md:h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
     <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
       
-          <li class=""><a
+          <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/blog/"
@@ -268,13 +271,40 @@
   >博客
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/post/r-language-environment-construction.html"
     
   >R语言环境构建
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#1%e6%9e%84%e5%bb%bar%e8%af%ad%e8%a8%80%e5%85%a8%e5%b1%80%e7%8e%af%e5%a2%83"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >1.构建R语言全局环境</a>
+            </li>
+          <li>
+              <a
+                href="#2%e7%9b%ae%e6%a0%87%e5%ae%89%e8%a3%85%e5%8c%85"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >2.目标安装包</a>
+            </li>
+          <li>
+              <a
+                href="#3%e4%bd%bf%e7%94%a8pkg%e5%ae%89%e8%a3%85%e9%9c%80%e8%a6%81%e4%bd%bf%e7%94%a8%e7%9a%84%e5%8c%85"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >3.使用pkg安装需要使用的包、</a>
+            </li>
+          <li>
+              <a
+                href="#4%e5%9c%a8wsl-ubuntu%e7%8e%af%e5%a2%83%e4%b8%ad%e5%a4%8d%e7%8e%b0"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >4.在WSL-Ubuntu环境中复现</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -317,7 +347,7 @@
     
   >关于
     </a></li>
-          <li class="open"><a
+          <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/"
@@ -387,12 +417,11 @@
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/folder/third/forth/fifth/right/"
     
   >对滴
     </a>
-  
               
             </li></ul>
       </div>
@@ -411,91 +440,101 @@
     
   >展示界面
     </a></li>
-    </ul><ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
-        
-          <li class=""><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/first-page/"
-    
-  >示例页面
-    </a></li>
-          <li class="open"><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/folder/"
-    
-  >文件夹
-        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
-    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/folder/leaf/"
-    
-  >扉页
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col open"><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/folder/third/"
-    
-  >三级
-        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
-    </a>
-              <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/folder/third/forth/"
-    
-  >四级
-        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
-    </a>
-              <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/folder/third/forth/soil/"
-    
-  >土壤
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col open"><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/folder/third/forth/fifth/"
-    
-  >五级
-        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
-    </a>
-              <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
-    href="/docs/folder/third/forth/fifth/right/"
-    
-  >对滴
-    </a>
-              
-            </li></ul>
-      </div>
-            </li></ul>
-      </div>
-            </li></ul>
-      </div>
-            </li></ul>
-      </div></li>
-        
-      </ul>
-    </div>
+    </ul><div class="hx:max-xl:hidden hx:h-0 hx:w-64 hx:shrink-0"></div></div>
   
   
 
 </aside>
-    <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><div class=" hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:transition-all hx:duration-300 hx:ease-in-out hx:overflow-hidden hx:opacity-0 hx:max-h-0 hx:py-0 hx:mt-0 hx:cursor-pointer hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+  <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4">
+        <div class="hx:mb-4 hx:flex hx:items-center hx:justify-between">
+            <p class="hx:font-semibold hx:tracking-tight">本页目录</p>
+            
+            
+            <button id="toc-global-toggle" onclick="toggleGlobalToc()" class="hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-transform hx:duration-200" title="Fold/Unfold All">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="hx:w-4 hx:h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+        </div>
+        
+        <ul class="hx:pb-6" id="toc-list"><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
+        
+        
+        <a class="hx:flex hx:items-start hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
+           href="#1%e6%9e%84%e5%bb%bar%e8%af%ad%e8%a8%80%e5%85%a8%e5%b1%80%e7%8e%af%e5%a2%83"
+           style="padding-left: 1rem;">
+          
+          <span class="hx:shrink-0 hx:flex hx:items-centesr hx:h-5"><span class="toc-arrow" onclick="toggleLevel(event, this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="hx:w-4 hx:h-4">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                </svg>
+              </span></span>
+
+          <span class="hextra-toc-text hx:flex-1">1.构建R语言全局环境
+          </span>
+        </a>
+      </li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6" data-level="2">
+        
+        
+        <a class="hx:flex hx:items-start hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
+           href="#11-%e6%9e%84%e5%bb%bar"
+           style="padding-left: 2rem;">
+          
+          <span class="hx:shrink-0 hx:flex hx:items-centesr hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
+
+          <span class="hextra-toc-text hx:flex-1">1.1 构建R
+          </span>
+        </a>
+      </li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6" data-level="2">
+        
+        
+        <a class="hx:flex hx:items-start hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
+           href="#12-%e5%ae%89%e8%a3%85%e7%b3%bb%e7%bb%9f%e7%ba%a7%e7%9a%84%e5%8c%85"
+           style="padding-left: 2rem;">
+          
+          <span class="hx:shrink-0 hx:flex hx:items-centesr hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
+
+          <span class="hextra-toc-text hx:flex-1">1.2 安装系统级的包
+          </span>
+        </a>
+      </li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
+        
+        
+        <a class="hx:flex hx:items-start hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
+           href="#2%e7%9b%ae%e6%a0%87%e5%ae%89%e8%a3%85%e5%8c%85"
+           style="padding-left: 1rem;">
+          
+          <span class="hx:shrink-0 hx:flex hx:items-centesr hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
+
+          <span class="hextra-toc-text hx:flex-1">2.目标安装包
+          </span>
+        </a>
+      </li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
+        
+        
+        <a class="hx:flex hx:items-start hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
+           href="#3%e4%bd%bf%e7%94%a8pkg%e5%ae%89%e8%a3%85%e9%9c%80%e8%a6%81%e4%bd%bf%e7%94%a8%e7%9a%84%e5%8c%85"
+           style="padding-left: 1rem;">
+          
+          <span class="hx:shrink-0 hx:flex hx:items-centesr hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
+
+          <span class="hextra-toc-text hx:flex-1">3.使用pkg安装需要使用的包、
+          </span>
+        </a>
+      </li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
+        
+        
+        <a class="hx:flex hx:items-start hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
+           href="#4%e5%9c%a8wsl-ubuntu%e7%8e%af%e5%a2%83%e4%b8%ad%e5%a4%8d%e7%8e%b0"
+           style="padding-left: 1rem;">
+          
+          <span class="hx:shrink-0 hx:flex hx:items-centesr hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
+
+          <span class="hextra-toc-text hx:flex-1">4.在WSL-Ubuntu环境中复现
+          </span>
+        </a>
+      </li></ul><div class="hx:mt-4 hx:border-t hx:bg-white hx:pt-0 hx:shadow-[0_-12px_16px_white] toc-footer-container hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:transition-all hx:duration-300 hx:ease-in-out hx:overflow-hidden hx:opacity-0 hx:max-h-0 hx:py-0 hx:mt-0 hx:cursor-pointer hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>回到顶部</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
@@ -662,38 +701,278 @@
     transform: rotate(-90deg);
   }
 </style>
-    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
-      <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
-        <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
+  <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
+      <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/">文档</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/folder/">文件夹</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/folder/third/">三级</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/folder/third/forth/">四级</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/folder/third/forth/fifth/">五级</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">对滴</div>
+          <a href="/blog/">博客</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">R语言环境构建</div>
   </div>
 
-        <div class="content">
-          <h1>对滴</h1>
-          <p>反正就是依然可以。</p>
+      <h1 class="hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">R语言环境构建</h1>
 
-        </div>
-        <div class="hx:mt-16"></div>
-        <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/folder/leaf/"
-        title="扉页"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>扉页</a></div>
+      
+      <div class="hx:mt-4 hx:mb-16 hx:text-gray-500 hx:dark:text-gray-400 hx:text-sm" 
+           style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; row-gap: 0.5rem;">
         
+        <div class="hx:flex hx:items-center">
+                <svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span>January 7, 2026</span>
+            </div><span class="hx:mx-1">·</span><div class="hx:flex hx:items-center"><svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+                <span>January 7, 2026</span></div><span class="hx:mx-1">·</span><div class="hx:flex hx:items-center">
+                <svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>5 分钟</span>
+            </div></div>
+      
+      
+      <div class="content">
+        <p><img src="/images/PixPin_2026-01-07_14-10-02-20260107141008-kk1lpok.png" alt="image"  loading="lazy" /></p>
+<h2>1.构建R语言全局环境<span class="hx:absolute hx:-mt-20" id="1构建r语言全局环境"></span>
+    <a href="#1%e6%9e%84%e5%bb%bar%e8%af%ad%e8%a8%80%e5%85%a8%e5%b1%80%e7%8e%af%e5%a2%83" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>log：</strong></p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> ➜  envs pixi global list
+</span></span><span class="line"><span class="cl">Global environments as specified in <span class="s1">&#39;/data/xds/Worktools/pixi/manifests/pixi-global.toml&#39;</span>
+</span></span><span class="line"><span class="cl">└── r
+</span></span><span class="line"><span class="cl">    ├─ dependencies: r-base 4.5.1, r-renv 1.1.5, r-pak 0.9.0
+</span></span><span class="line"><span class="cl">    └─ exposes: R, Rscript</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>‍</p>
+<p>首先，使用pixi全局环境管理，创建一个全局的R环境，这里使用pixi自由安装对应版本。</p>
+<h3>1.1 构建R<span class="hx:absolute hx:-mt-20" id="11-构建r"></span>
+    <a href="#11-%e6%9e%84%e5%bb%bar" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>！！！用旧不用新，有些R包的更新不够快，所以最好使用落后一个或两个版本的语言进行工作，比较稳定。</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 构建代码</span>
+</span></span><span class="line"><span class="cl">pixi global install --environment r r-base<span class="o">=</span>4.4.3.* r-pak  r-biocmanager r-remotes r-essentials
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除该环境 </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pixi global uninstall --environment r</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>1.2 安装系统级的包<span class="hx:absolute hx:-mt-20" id="12-安装系统级的包"></span>
+    <a href="#12-%e5%ae%89%e8%a3%85%e7%b3%bb%e7%bb%9f%e7%ba%a7%e7%9a%84%e5%8c%85" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>这里注意，pixi指定安装到哪个环境，使用add &ndash;enviroment name 参数。</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 📦 添加基础构建工具和图形库</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 构建系统中用于检测依赖的工具</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 字体渲染库</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 字体配置库</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 字体排版库</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 双向文本支持（如阿拉伯语）</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># PNG 图像支持</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># JPEG 图像支持（加速版）</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># TIFF 图像支持</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 线性规划库</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Git 库，某些 R 包依赖它</span>
+</span></span><span class="line"><span class="cl">pixi global add --environment r <span class="se">\
+</span></span></span><span class="line"><span class="cl">  pkg-config <span class="se">\
+</span></span></span><span class="line"><span class="cl">  freetype <span class="se">\
+</span></span></span><span class="line"><span class="cl">  fontconfig <span class="se">\
+</span></span></span><span class="line"><span class="cl">  harfbuzz <span class="se">\
+</span></span></span><span class="line"><span class="cl">  fribidi <span class="se">\
+</span></span></span><span class="line"><span class="cl">  libpng <span class="se">\
+</span></span></span><span class="line"><span class="cl">  libjpeg-turbo <span class="se">\
+</span></span></span><span class="line"><span class="cl">  libtiff <span class="se">\
+</span></span></span><span class="line"><span class="cl">  glpk <span class="se">\
+</span></span></span><span class="line"><span class="cl">  libgit2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 🖼️ 添加文档与图像处理工具</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 文档转换工具，R Markdown 依赖</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 图像处理工具，支持图像导出与转换</span>
+</span></span><span class="line"><span class="cl">pixi global add --environment r <span class="se">\
+</span></span></span><span class="line"><span class="cl">  pandoc <span class="se">\
+</span></span></span><span class="line"><span class="cl">  imagemagick
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 🧪 添加 Arrow 数据栈</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Arrow C++ 库</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Arrow C++ 构建支持</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># R 的 Arrow 接口</span>
+</span></span><span class="line"><span class="cl">pixi global add --environment r  r-arrow
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 🌍 添加地理信息栈（GIS）</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 地理数据抽象库</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 坐标转换库</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 几何运算库</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 单位转换库，常用于气象数据</span>
+</span></span><span class="line"><span class="cl">pixi global add --environment r <span class="se">\
+</span></span></span><span class="line"><span class="cl">  gdal <span class="se">\
+</span></span></span><span class="line"><span class="cl">  proj <span class="se">\
+</span></span></span><span class="line"><span class="cl">  geos <span class="se">\
+</span></span></span><span class="line"><span class="cl">  udunits2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 📊 添加 R 空间分析包</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># R 的简单特征空间数据包</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># R 的空间依赖分析包</span>
+</span></span><span class="line"><span class="cl">pixi global add --environment r <span class="se">\
+</span></span></span><span class="line"><span class="cl">  r-sf <span class="se">\
+</span></span></span><span class="line"><span class="cl">  r-spdep</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>2.目标安装包<span class="hx:absolute hx:-mt-20" id="2目标安装包"></span>
+    <a href="#2%e7%9b%ae%e6%a0%87%e5%ae%89%e8%a3%85%e5%8c%85" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">limma</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">GEOquery</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">survival</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">glmnet</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">timeROC</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ggpubr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">patchwork</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">Matrix</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tibble</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">future</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">pheatmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">msigdbr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">clusterProfiler</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">Seurat</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">SingleR</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">harmony</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">DoubletFinder</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">copykat</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">GSVA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">AUCell</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">monocle3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">CellChat</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">SCENIC</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">RColorBrewer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">hdf5r</span><span class="p">)</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>3.使用pkg安装需要使用的包、<span class="hx:absolute hx:-mt-20" id="3使用pkg安装需要使用的包"></span>
+    <a href="#3%e4%bd%bf%e7%94%a8pkg%e5%ae%89%e8%a3%85%e9%9c%80%e8%a6%81%e4%bd%bf%e7%94%a8%e7%9a%84%e5%8c%85" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>通过不同的渠道来源分批安装。</p>
+<p>安装过程中可以看到，虽然有的系统依赖已经使用pixi安装，但是直接使用pak安装，依然会显示无法识别，但是在具体编译的时候，却可以调用，别管，这玩意能跑就行。</p>
+<p>pkg安装的过程中，也可能因为各种原因，需要穿插使用一下BiocManager，remotes，这都无伤大雅，反正做好记录。</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="c1"># CRAN</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;survival&#34;</span><span class="p">,</span> <span class="s">&#34;glmnet&#34;</span><span class="p">,</span> <span class="s">&#34;timeROC&#34;</span><span class="p">,</span> <span class="s">&#34;ggpubr&#34;</span><span class="p">,</span> <span class="s">&#34;Matrix&#34;</span><span class="p">,</span> <span class="s">&#34;future&#34;</span><span class="p">,</span> <span class="s">&#34;pheatmap&#34;</span><span class="p">,</span> <span class="s">&#34;harmony&#34;</span><span class="p">,</span> <span class="s">&#34;RColorBrewer&#34;</span><span class="p">,</span> <span class="s">&#34;hdf5r&#34;</span><span class="p">,</span> <span class="s">&#34;feather&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Bioconductor</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;bioc::limma&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;bioc::GEOquery&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;bioc::msigdbr&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;bioc::Seurat&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;bioc::SingleR&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;bioc::GSVA&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;bioc::AUCell&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;bioc::rhdf5&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;YuLab-SMU/ggtree&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;bioc::clusterProfiler&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># GitHub</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;github::chris-mcginnis-ucsf/DoubletFinder&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;github::satijalab/seurat-wrappers&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;github::navinlabcode/copykat&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;github::sqjin/CellChat&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;github::aertslab/SCopeLoomR&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;github::aertslab/SCENIC&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># BPCells是monocle3前提，因为直接安装无法解压(也可能是他github为止改变引起连锁反应）</span>
+</span></span><span class="line"><span class="cl"><span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#34;bnprks/BPCells/r&#34;</span><span class="p">)</span> <span class="c1"># 注意这里的/r可能就是这样，所以pkg不能直接安装。</span>
+</span></span><span class="line"><span class="cl"><span class="n">pak</span><span class="o">::</span><span class="nf">pkg_install</span><span class="p">(</span><span class="s">&#34;github::cole-trapnell-lab/monocle3&#34;</span><span class="p">)</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>‍</p>
+<p>‍</p>
+<h2>4.在WSL-Ubuntu环境中复现<span class="hx:absolute hx:-mt-20" id="4在wsl-ubuntu环境中复现"></span>
+    <a href="#4%e5%9c%a8wsl-ubuntu%e7%8e%af%e5%a2%83%e4%b8%ad%e5%a4%8d%e7%8e%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 个别包无法使用pkg安装,或者环境出现问题无法调用对应的应用编译软件.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># CRAN</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span>c<span class="o">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;survival&#34;</span>, <span class="s2">&#34;glmnet&#34;</span>, <span class="s2">&#34;timeROC&#34;</span>, <span class="s2">&#34;ggpubr&#34;</span>, <span class="s2">&#34;Matrix&#34;</span>, <span class="s2">&#34;future&#34;</span>, <span class="s2">&#34;pheatmap&#34;</span>, <span class="s2">&#34;harmony&#34;</span>, <span class="s2">&#34;RColorBrewer&#34;</span>, <span class="s2">&#34;feather&#34;</span><span class="o">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 直接使用pixi安装hdf5r也算是基本可以还原</span>
+</span></span><span class="line"><span class="cl">pixi g add -e r r-hd5fr
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Bioconductor</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;bioc::limma&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;bioc::GEOquery&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;bioc::msigdbr&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;bioc::Seurat&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;bioc::SingleR&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;bioc::GSVA&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;bioc::AUCell&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;bioc::rhdf5&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;YuLab-SMU/ggtree&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;bioc::clusterProfiler&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># GitHub</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;github::chris-mcginnis-ucsf/DoubletFinder&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;github::satijalab/seurat-wrappers&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;github::navinlabcode/copykat&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;github::sqjin/CellChat&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;github::aertslab/SCopeLoomR&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;github::aertslab/SCENIC&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># BPCells是monocle3前提，因为直接安装无法解压(也可能是他github为止改变引起连锁反应）</span>
+</span></span><span class="line"><span class="cl">remotes::install_github<span class="o">(</span><span class="s2">&#34;bnprks/BPCells/r&#34;</span><span class="o">)</span> <span class="c1"># 注意这里的/r可能就是这样，所以pkg不能直接安装。</span>
+</span></span><span class="line"><span class="cl">pak::pkg_install<span class="o">(</span><span class="s2">&#34;github::cole-trapnell-lab/monocle3&#34;</span><span class="o">)</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>其它代码完美复现环境.</p>
+<p>环境完美复现代码.</p>
+<p>‍</p>
+
+      </div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+        href="/blog/20251220_hugo-waline-comment/"
+        title="Hugo添加Waline评论功能记录"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Hugo添加Waline评论功能记录</a></div>
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
 <div id="waline" class="hx-mt-8"></div>
 
@@ -701,10 +980,10 @@
 <script type="module">
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
     init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","serverURL":"https://waline.whynerve.top/"});
-</script>
-      </main>
-    </article>
-  </div>
+</script></main>
+  </article>
+
+</div>
 
       <footer class="hextra-footer hx:bg-gray-100 hx:pb-[env(safe-area-inset-bottom)] hx:dark:bg-neutral-900 hx:print:bg-transparent">
   
@@ -912,7 +1191,30 @@
         </div>
       </div>
       
-      <div class="mtoc-list-container"><div style="font-size: 0.85rem; color: #888; text-align: center; padding: 20px 0;">当前页面没有目录</div></div>
+      <div class="mtoc-list-container"><div class="mtoc-tree">
+            <ul>
+    <li class="mtoc-item has-children is-expanded">
+      <div class="mtoc-item-row"><div class="mtoc-toggle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><a href="#" class="mtoc-link" data-id=""></a>
+      </div><div class="mtoc-subgroup"><ul>
+    <li class="mtoc-item has-children is-expanded">
+      <div class="mtoc-item-row"><div class="mtoc-toggle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><a href="#1%e6%9e%84%e5%bb%bar%e8%af%ad%e8%a8%80%e5%85%a8%e5%b1%80%e7%8e%af%e5%a2%83" class="mtoc-link" data-id="1构建r语言全局环境">1.构建R语言全局环境</a>
+      </div><div class="mtoc-subgroup"><ul>
+    <li class="mtoc-item  is-expanded">
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#11-%e6%9e%84%e5%bb%bar" class="mtoc-link" data-id="11-构建r">1.1 构建R</a>
+      </div></li>
+    <li class="mtoc-item  is-expanded">
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#12-%e5%ae%89%e8%a3%85%e7%b3%bb%e7%bb%9f%e7%ba%a7%e7%9a%84%e5%8c%85" class="mtoc-link" data-id="12-安装系统级的包">1.2 安装系统级的包</a>
+      </div></li></ul></div></li>
+    <li class="mtoc-item  is-expanded">
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#2%e7%9b%ae%e6%a0%87%e5%ae%89%e8%a3%85%e5%8c%85" class="mtoc-link" data-id="2目标安装包">2.目标安装包</a>
+      </div></li>
+    <li class="mtoc-item  is-expanded">
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#3%e4%bd%bf%e7%94%a8pkg%e5%ae%89%e8%a3%85%e9%9c%80%e8%a6%81%e4%bd%bf%e7%94%a8%e7%9a%84%e5%8c%85" class="mtoc-link" data-id="3使用pkg安装需要使用的包">3.使用pkg安装需要使用的包、</a>
+      </div></li>
+    <li class="mtoc-item  is-expanded">
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#4%e5%9c%a8wsl-ubuntu%e7%8e%af%e5%a2%83%e4%b8%ad%e5%a4%8d%e7%8e%b0" class="mtoc-link" data-id="4在wsl-ubuntu环境中复现">4.在WSL-Ubuntu环境中复现</a>
+      </div></li></ul></div></li></ul>
+          </div></div>
     </div>
   </div>
 </div>
