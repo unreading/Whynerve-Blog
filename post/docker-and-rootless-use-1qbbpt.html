@@ -39,15 +39,15 @@ Docker Rootless 模式基本操作文档
 
 <meta
   property="article:modified_time"
-  content="2026-01-07T13:36:28+08:00">
+  content="2026-01-07T13:50:19+08:00">
 
 
 
   <meta itemprop="name" content="Docker 以及rootless使用">
   <meta itemprop="description" content="Docker Rootless 模式基本操作文档 1. 前置条件 ​安装工具​：确保系统已安装 newuidmap​ 和 newgidmap，用于用户命名空间 UID/GID 映射。">
   <meta itemprop="datePublished" content="2026-01-04T13:54:27+08:00">
-  <meta itemprop="dateModified" content="2026-01-07T13:36:28+08:00">
-  <meta itemprop="wordCount" content="489">
+  <meta itemprop="dateModified" content="2026-01-07T13:50:19+08:00">
+  <meta itemprop="wordCount" content="399">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Docker 以及rootless使用">
   <meta name="twitter:description" content="Docker Rootless 模式基本操作文档 1. 前置条件 ​安装工具​：确保系统已安装 newuidmap​ 和 newgidmap，用于用户命名空间 UID/GID 映射。">
@@ -323,12 +323,6 @@ Docker Rootless 模式基本操作文档
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
               >6. 日志与调试</a>
             </li>
-          <li>
-              <a
-                href="#7-%e5%b8%b8%e8%a7%81%e9%99%90%e5%88%b6"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >7. 常见限制</a>
-            </li>
           </ul>
   
               
@@ -572,18 +566,6 @@ Docker Rootless 模式基本操作文档
           <span class="hextra-toc-text hx:flex-1">6. 日志与调试
           </span>
         </a>
-      </li><li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
-        
-        
-        <a class="hx:flex hx:items-start hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#7-%e5%b8%b8%e8%a7%81%e9%99%90%e5%88%b6"
-           style="padding-left: 1rem;">
-          
-          <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
-
-          <span class="hextra-toc-text hx:flex-1">7. 常见限制
-          </span>
-        </a>
       </li></ul><div class="hx:mt-4 hx:border-t hx:bg-white hx:pt-0 hx:shadow-[0_-12px_16px_white] toc-footer-container hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:transition-all hx:duration-300 hx:ease-in-out hx:overflow-hidden hx:opacity-0 hx:max-h-0 hx:py-0 hx:mt-0 hx:cursor-pointer hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>回到顶部</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -785,7 +767,7 @@ Docker Rootless 模式基本操作文档
                 <svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <span>2 分钟</span>
+                <span>1 分钟</span>
             </div></div>
       
       
@@ -990,12 +972,6 @@ Docker Rootless 模式基本操作文档
 </div>
 </div>
 </li>
-</ul>
-<h2>7. 常见限制<span class="hx:absolute hx:-mt-20" id="7-常见限制"></span>
-    <a href="#7-%e5%b8%b8%e8%a7%81%e9%99%90%e5%88%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li>​<strong>低端口不可用</strong>：只能使用 1024 以上端口。</li>
-<li>​<strong>挂载系统目录容易报错</strong>​：推荐 <code>$HOME</code> 下路径。</li>
-<li>​<strong>性能略低</strong>​：依赖 <code>fuse-overlayfs</code>​ 或 <code>shiftfs</code>，在某些场景下性能不如 rootful 模式。</li>
 </ul>
 <p>‍</p>
 
@@ -1244,9 +1220,6 @@ Docker Rootless 模式基本操作文档
       </div></li>
     <li class="mtoc-item  is-expanded">
       <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#6-%e6%97%a5%e5%bf%97%e4%b8%8e%e8%b0%83%e8%af%95" class="mtoc-link" data-id="6-日志与调试">6. 日志与调试</a>
-      </div></li>
-    <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#7-%e5%b8%b8%e8%a7%81%e9%99%90%e5%88%b6" class="mtoc-link" data-id="7-常见限制">7. 常见限制</a>
       </div></li></ul></div></li></ul>
           </div></div>
     </div>
