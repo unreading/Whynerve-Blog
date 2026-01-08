@@ -8,41 +8,49 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Gemini 白嫖 – 为什么神经</title>
-  <meta name="description" content="本文就是一篇关于 Gemini 白嫖的文章，当时的时间是 11.22" /><link rel="canonical" href="https://whynerve.me/blog/20251121_gemini-free/" itemprop="url" />
+<title>Docker 以及rootless使用 – 为什么神经</title>
+  <meta name="description" content="
+Docker Rootless 模式基本操作文档 1. 前置条件 ​安装工具​：确保系统已安装 newuidmap​ 和 newgidmap，用于用户命名空间 UID/GID 映射。" /><link rel="canonical" href="https://whynerve.me/post/docker-and-rootless-use-z1ui5wz.html" itemprop="url" />
 
-<meta property="og:title" content="Gemini 白嫖">
+<meta property="og:title" content="Docker 以及rootless使用">
 <meta
   property="og:description"
   content="
-    本文就是一篇关于 Gemini 白嫖的文章，当时的时间是 11.22
+    
+      
+Docker Rootless 模式基本操作文档
+    1. 前置条件
+    
+
+​安装工具​：确保系统已安装 newuidmap​ 和 newgidmap，用于用户命名空间 UID/GID 映射。
+    
   ">
 <meta
   property="og:type"
   content="
     article
   ">
-<meta property="og:url" content="https://whynerve.me/blog/20251121_gemini-free/"><meta property="article:section" content="blog">
+<meta property="og:url" content="https://whynerve.me/post/docker-and-rootless-use-z1ui5wz.html"><meta property="article:section" content="blog">
 
 <meta
   property="article:published_time"
-  content="2025-11-21T00:00:00+00:00">
+  content="2026-01-04T13:54:27+08:00">
 
 
 <meta
   property="article:modified_time"
-  content="2026-01-07T13:51:17+08:00">
+  content="2026-01-08T13:00:29+08:00">
 
 
 
-  <meta itemprop="name" content="Gemini 白嫖">
-  <meta itemprop="description" content="本文就是一篇关于 Gemini 白嫖的文章，当时的时间是 11.22">
-  <meta itemprop="datePublished" content="2025-11-21T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2026-01-07T13:51:17+08:00">
-  <meta itemprop="wordCount" content="913">
+  <meta itemprop="name" content="Docker 以及rootless使用">
+  <meta itemprop="description" content="Docker Rootless 模式基本操作文档 1. 前置条件 ​安装工具​：确保系统已安装 newuidmap​ 和 newgidmap，用于用户命名空间 UID/GID 映射。">
+  <meta itemprop="datePublished" content="2026-01-04T13:54:27+08:00">
+  <meta itemprop="dateModified" content="2026-01-08T13:00:29+08:00">
+  <meta itemprop="wordCount" content="399">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Gemini 白嫖">
-  <meta name="twitter:description" content="本文就是一篇关于 Gemini 白嫖的文章，当时的时间是 11.22">
+  <meta name="twitter:title" content="Docker 以及rootless使用">
+  <meta name="twitter:description" content="Docker Rootless 模式基本操作文档 1. 前置条件 ​安装工具​：确保系统已安装 newuidmap​ 和 newgidmap，用于用户命名空间 UID/GID 映射。">
 
     <link rel="preload" href="/css/compiled/main.min.2e957ef47d9e6e454c9cbf33da4b5a5410f706d01b62910bc831dca5e7c8f1a2.css" as="style" integrity="sha256-LpV&#43;9H2ebkVMnL8z2ktaVBD3BtAbYpELyDHcpefI8aI=" />
     <link href="/css/compiled/main.min.2e957ef47d9e6e454c9cbf33da4b5a5410f706d01b62910bc831dca5e7c8f1a2.css" rel="stylesheet" integrity="sha256-LpV&#43;9H2ebkVMnL8z2ktaVBD3BtAbYpELyDHcpefI8aI=" />
@@ -158,7 +166,7 @@
           
           <li class="hx:flex hx:flex-col">
             <a
-              href="/blog/20251121_gemini-free/"
+              href="/post/docker-and-rootless-use-z1ui5wz.html"
               class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
             >简体中文<span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></a>
           </li>
@@ -166,7 +174,7 @@
           
           <li class="hx:flex hx:flex-col">
             <a
-              href="/en/blog/20251121_gemini-free/"
+              href="/en/"
               class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
             >English</a>
           </li>
@@ -301,13 +309,52 @@
   >测试
     </a>
               
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/post/docker-and-rootless-use-z1ui5wz.html"
     
   >Docker 以及rootless使用
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#1-%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >1. 前置条件</a>
+            </li>
+          <li>
+              <a
+                href="#2-%e5%90%af%e5%8a%a8-rootless-docker"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >2. 启动 Rootless Docker</a>
+            </li>
+          <li>
+              <a
+                href="#3-%e5%b8%b8%e7%94%a8%e5%ae%b9%e5%99%a8%e6%93%8d%e4%bd%9c"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >3. 常用容器操作</a>
+            </li>
+          <li>
+              <a
+                href="#4-%e5%8d%b7%e6%8c%82%e8%bd%bd"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >4. 卷挂载</a>
+            </li>
+          <li>
+              <a
+                href="#5-%e7%bd%91%e7%bb%9c%e7%ab%af%e5%8f%a3%e6%98%a0%e5%b0%84"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >5. 网络端口映射</a>
+            </li>
+          <li>
+              <a
+                href="#6-%e6%97%a5%e5%bf%97%e4%b8%8e%e8%b0%83%e8%af%95"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >6. 日志与调试</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -317,52 +364,13 @@
   >Hugo添加Waline评论功能记录
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/blog/20251121_gemini-free/"
     
   >Gemini 白嫖
     </a>
-  
-    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
-              <a
-                href="#%e8%8a%82%e7%82%b9%e6%ad%a3%e7%a1%ae%e9%a1%b5%e9%9d%a2"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >节点正确页面。</a>
-            </li>
-          <li>
-              <a
-                href="#%e6%9c%89%e8%b5%84%e6%a0%bc%e9%a1%b5%e9%9d%a2"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >有资格页面</a>
-            </li>
-          <li>
-              <a
-                href="#%e9%aa%8c%e8%af%81%e8%b5%84%e6%a0%bc"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >验证资格</a>
-            </li>
-          <li>
-              <a
-                href="#%e9%80%9a%e8%bf%87%e5%ae%a1%e6%a0%b8"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >通过审核</a>
-            </li>
-          <li>
-              <a
-                href="#%e5%ae%a1%e6%a0%b8%e9%80%9a%e8%bf%87%e8%8e%b7%e5%8f%96offer"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >审核通过，获取offer</a>
-            </li>
-          <li>
-              <a
-                href="#%e6%88%90%e5%8a%9f%e8%ae%a2%e9%98%85"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >成功订阅</a>
-            </li>
-          </ul>
-  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -502,37 +510,7 @@
         
         <ul class="hx:pb-6" id="toc-list"><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="0">
         <a class="hx:flex hx:items-start hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9"
-           style="padding-left: 0rem;">
-          
-          <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
-
-          <span class="hextra-toc-text hx:flex-1">注意事项
-          </span>
-        </a>
-      </li><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="0">
-        <a class="hx:flex hx:items-start hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#1-%e5%85%b7%e5%a4%87%e7%9a%84%e6%9d%a1%e4%bb%b6"
-           style="padding-left: 0rem;">
-          
-          <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
-
-          <span class="hextra-toc-text hx:flex-1">1. 具备的条件
-          </span>
-        </a>
-      </li><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="0">
-        <a class="hx:flex hx:items-start hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#2-%e5%bc%80%e5%a7%8b%e5%ae%9e%e6%96%bd"
-           style="padding-left: 0rem;">
-          
-          <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
-
-          <span class="hextra-toc-text hx:flex-1">2. 开始实施
-          </span>
-        </a>
-      </li><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="0">
-        <a class="hx:flex hx:items-start hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#3%e5%85%b3%e9%94%ae%e9%a1%b5%e9%9d%a2%e5%9b%be%e7%89%87"
+           href="#docker-rootless-%e6%a8%a1%e5%bc%8f%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9c%e6%96%87%e6%a1%a3"
            style="padding-left: 0rem;">
           
           <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" onclick="toggleLevel(event, this)">
@@ -541,80 +519,70 @@
                 </svg>
               </span></span>
 
-          <span class="hextra-toc-text hx:flex-1">3.关键页面图片
+          <span class="hextra-toc-text hx:flex-1">Docker Rootless 模式基本操作文档
           </span>
         </a>
       </li><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
         <a class="hx:flex hx:items-start  hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#%e8%8a%82%e7%82%b9%e6%ad%a3%e7%a1%ae%e9%a1%b5%e9%9d%a2"
+           href="#1-%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6"
            style="padding-left: 1rem;">
           
           <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
 
-          <span class="hextra-toc-text hx:flex-1">节点正确页面。
+          <span class="hextra-toc-text hx:flex-1">1. 前置条件
           </span>
         </a>
       </li><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
         <a class="hx:flex hx:items-start  hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#%e6%9c%89%e8%b5%84%e6%a0%bc%e9%a1%b5%e9%9d%a2"
+           href="#2-%e5%90%af%e5%8a%a8-rootless-docker"
            style="padding-left: 1rem;">
           
           <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
 
-          <span class="hextra-toc-text hx:flex-1">有资格页面
+          <span class="hextra-toc-text hx:flex-1">2. 启动 Rootless Docker
           </span>
         </a>
       </li><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
         <a class="hx:flex hx:items-start  hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#%e9%aa%8c%e8%af%81%e8%b5%84%e6%a0%bc"
+           href="#3-%e5%b8%b8%e7%94%a8%e5%ae%b9%e5%99%a8%e6%93%8d%e4%bd%9c"
            style="padding-left: 1rem;">
           
           <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
 
-          <span class="hextra-toc-text hx:flex-1">验证资格
+          <span class="hextra-toc-text hx:flex-1">3. 常用容器操作
           </span>
         </a>
       </li><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
         <a class="hx:flex hx:items-start  hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#%e9%80%9a%e8%bf%87%e5%ae%a1%e6%a0%b8"
+           href="#4-%e5%8d%b7%e6%8c%82%e8%bd%bd"
            style="padding-left: 1rem;">
           
           <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
 
-          <span class="hextra-toc-text hx:flex-1">通过审核
+          <span class="hextra-toc-text hx:flex-1">4. 卷挂载
           </span>
         </a>
       </li><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
         <a class="hx:flex hx:items-start  hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#%e5%ae%a1%e6%a0%b8%e9%80%9a%e8%bf%87%e8%8e%b7%e5%8f%96offer"
+           href="#5-%e7%bd%91%e7%bb%9c%e7%ab%af%e5%8f%a3%e6%98%a0%e5%b0%84"
            style="padding-left: 1rem;">
           
           <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
 
-          <span class="hextra-toc-text hx:flex-1">审核通过，获取offer
+          <span class="hextra-toc-text hx:flex-1">5. 网络端口映射
           </span>
         </a>
       </li><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="1">
         <a class="hx:flex hx:items-start  hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#%e6%88%90%e5%8a%9f%e8%ae%a2%e9%98%85"
+           href="#6-%e6%97%a5%e5%bf%97%e4%b8%8e%e8%b0%83%e8%af%95"
            style="padding-left: 1rem;">
           
           <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
 
-          <span class="hextra-toc-text hx:flex-1">成功订阅
+          <span class="hextra-toc-text hx:flex-1">6. 日志与调试
           </span>
         </a>
-      </li><li class="hx:my-6 hx:scroll-my-6 hx:scroll-py-6" data-level="0">
-        <a class="hx:flex hx:items-start hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" 
-           href="#4%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99"
-           style="padding-left: 0rem;">
-          
-          <span class="hx:shrink-0 hx:flex hx:items-center hx:h-5"><span class="toc-arrow" style="cursor: default; opacity: 0;"></span></span>
-
-          <span class="hextra-toc-text hx:flex-1">4.参考资料
-          </span>
-        </a>
-      </li></ul><div class="hx:mt-4 hx:border-t hx:bg-white hx:pt-0 hx:shadow-[0_-12px_16px_white] toc-footer-container hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:mt-4 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/unreading/Whynerve-hextra-source/tree/main/content/blog/20251121_gemini-free.md" target="_blank" rel="noreferrer">在 GitHub 上编辑此页 →</a><button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:transition-all hx:duration-300 hx:ease-in-out hx:overflow-hidden hx:opacity-0 hx:max-h-0 hx:py-0 hx:mt-0 hx:cursor-pointer hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+      </li></ul><div class="hx:mt-4 hx:border-t hx:bg-white hx:pt-0 hx:shadow-[0_-12px_16px_white] toc-footer-container hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:mt-4 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/unreading/Whynerve-hextra-source/tree/main/content/blog/20260104_docker-and-rootless-use-z1ui5wz.md" target="_blank" rel="noreferrer">在 GitHub 上编辑此页 →</a><button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:transition-all hx:duration-300 hx:ease-in-out hx:overflow-hidden hx:opacity-0 hx:max-h-0 hx:py-0 hx:mt-0 hx:cursor-pointer hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>回到顶部</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
@@ -786,10 +754,10 @@
       <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
           <a href="/blog/">博客</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Gemini 白嫖</div>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Docker 以及rootless使用</div>
   </div>
 
-      <h1 class="hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">Gemini 白嫖</h1>
+      <h1 class="hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">Docker 以及rootless使用</h1>
 
       
       <div class="hx:mt-4 hx:mb-16 hx:text-gray-500 hx:dark:text-gray-400 hx:text-sm" 
@@ -799,114 +767,231 @@
                 <svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                 </svg>
-                <span>November 21, 2025</span>
+                <span>January 4, 2026</span>
             </div><span class="hx:mx-1">·</span><div class="hx:flex hx:items-center"><svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                 </svg>
-                <span>January 7, 2026</span></div><span class="hx:mx-1">·</span><div class="hx:flex hx:items-center">
-                <svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                </svg>
-                <span class="hx:flex hx:flex-wrap hx:gap-1">
-                        <a href="#" target="_blank" class="hx:group hx:inline-flex hx:items-center hx:text-current">
-                            <span class="hx:group-hover:underline">为什么神经</span>
-                        </a></span>
-            </div><span class="hx:mx-1">·</span><div class="hx:flex hx:items-center">
+                <span>January 8, 2026</span></div><span class="hx:mx-1">·</span><div class="hx:flex hx:items-center">
                 <svg class="hx:w-4 hx:h-4 hx:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <span>4 分钟</span>
+                <span>1 分钟</span>
             </div></div>
       
       
       <div class="content">
-        <h1>注意事项<span class="hx:absolute hx:-mt-20" id="注意事项"></span>
-    <a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="subheading-anchor" aria-label="Permalink for this section"></a></h1><p><img src="/images/image-20251121160914-rvknkid.png" alt="image"  loading="lazy" /></p>
-<p><strong>使用Gemini数据可能被谷歌使用，需要知道！</strong></p>
-<p>人工搭建一个属于自己的本地ai大模型，和保留属于自己的数据还是比较重要的，<strong>我觉得这是未来的一个小风口，类似于nas一样。</strong></p>
-<p>首先，想办法搭建一个属于自己的本地大模型，找到其能用于辅助代码写作和性能的最佳交叉。</p>
-<p><img src="/images/image-20251129132324-6x5zfu2.png" alt="image"  loading="lazy" /></p>
-<h1>1. 具备的条件<span class="hx:absolute hx:-mt-20" id="1-具备的条件"></span>
-    <a href="#1-%e5%85%b7%e5%a4%87%e7%9a%84%e6%9d%a1%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h1><ol>
-<li><strong>合适的节点</strong></li>
-</ol>
-<p>这一个需要看自己购买节点是否纯净，可以多试试。</p>
-<ol start="2">
-<li><strong>账号符合资格</strong></li>
-</ol>
-<p>之前我的两个账号，都不太符合资格，不知道为什么，可以是账号受到限制或者是当时一开始没有设置成年。</p>
-<ol start="3">
-<li><strong>通过ai工具和网上他人攻略构建合理身份</strong></li>
-</ol>
-<p>需要构建一个合理的身份，考虑到可能审核人员都来自欧美以及我被拒绝过多心灰意冷，所以我</p>
-<h1>2. 开始实施<span class="hx:absolute hx:-mt-20" id="2-开始实施"></span>
-    <a href="#2-%e5%bc%80%e5%a7%8b%e5%ae%9e%e6%96%bd" class="subheading-anchor" aria-label="Permalink for this section"></a></h1><ol>
-<li><strong>浏览器无痕模式</strong></li>
-<li><strong>登录有资格的谷歌账号（刚开始我的账号都没有资格于是选择），选择合适的节点</strong></li>
-<li><strong>第一次审核（11.12）</strong>  
-    <strong>由于1keyme无法通过，所以我选择自己构建一个身份，第一次我构建了越南的学生身份。成功通过。</strong></li>
-</ol>
-<p>    - 只使用了学生证<strong>右图</strong>，后来使用左图进行第二次失败：</p>
-<pre><code>  &lt;div style=&quot;display: flex; justify-content: space-between; gap: 10px; margin-top: 10px;&quot;&gt;
-      &lt;img src=&quot;/images/Gemini_Generated_Image_dbq4r0dbq4r0dbq4-20251121161448-1jbuv6s.png&quot; width=&quot;48%&quot; alt=&quot;生成图&quot; /&gt;
-      &lt;img src=&quot;/images/eae3ee75-c34b-453e-b031-da461e829ece-20251121161539-ghkwgud.jpg&quot; width=&quot;48%&quot; alt=&quot;学生证原图&quot; /&gt;
-  &lt;/div&gt;
-</code></pre>
-<p>    - 现在由于gemini3发布，可能热度进一步上升，审核更加严格了。所以仅仅是学生证是不够的，需要进一步使用课程表。</p>
-<ol start="4">
+        <p><img src="/images/%e7%b2%be%e7%81%b5-20260107130051-wr12x29.png" alt="image"  loading="lazy" /></p>
+<h1>Docker Rootless 模式基本操作文档<span class="hx:absolute hx:-mt-20" id="docker-rootless-模式基本操作文档"></span>
+    <a href="#docker-rootless-%e6%a8%a1%e5%bc%8f%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9c%e6%96%87%e6%a1%a3" class="subheading-anchor" aria-label="Permalink for this section"></a></h1><h2>1. 前置条件<span class="hx:absolute hx:-mt-20" id="1-前置条件"></span>
+    <a href="#1-%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
 <li>
-<p><strong>第二次学生身份审核（11.21）</strong></p>
-<p><strong>所以第二次我使用了意大利的（由于节点问题）学生身份</strong></p>
-<ul>
-<li>
-<p>首先通过ai询问意大利那些学校，有那些专业，选择一个合理的学校。</p>
-<p><strong>圣拉斐尔生命健康大学 (Vita-Salute San Raffaele)</strong></p>
+<p>​<strong>安装工具</strong>​：确保系统已安装 <code>newuidmap</code>​ 和 <code>newgidmap</code>，用于用户命名空间 UID/GID 映射。</p>
 </li>
 <li>
-<p>然后通过Google<strong>直接搜索学校学生证</strong>，可能会在<strong>领英等网站看到模板</strong>，使用<strong>ai对模板修改</strong>变为需要格式。</p>
-</li>
-<li>
-<p>同理使用<strong>Google搜索课程表</strong>，可能直接获得<strong>该学校官网课程表。</strong></p>
+<p>​<strong>配置 UID/GID 映射</strong>​：在 <code>/etc/subuid</code>​ 和 <code>/etc/subgid</code>​ 中为用户分配至少 ​<strong>65536 个 UID/GID</strong>。<br>
+示例：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>kleikli:1179648:65536</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
 </li>
 </ul>
+<h2>2. 启动 Rootless Docker<span class="hx:absolute hx:-mt-20" id="2-启动-rootless-docker"></span>
+    <a href="#2-%e5%90%af%e5%8a%a8-rootless-docker" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>
+<p>使用官方脚本安装：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dockerd-rootless-setuptool.sh install</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
 </li>
 <li>
-<p><strong>绑定信用卡</strong></p>
-<p>这里我使用的是自己的信用卡，绑定方法是通过谷歌商店（Google Play）绑定Visa信用卡，绑定成功后。<br>
-在直接点击Get Offer，就成功了。</p>
+<p>启动守护进程：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl --user start docker
+</span></span><span class="line"><span class="cl">systemctl --user <span class="nb">enable</span> docker</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
 </li>
-</ol>
-<p>‍</p>
-<h1>3.关键页面图片<span class="hx:absolute hx:-mt-20" id="3关键页面图片"></span>
-    <a href="#3%e5%85%b3%e9%94%ae%e9%a1%b5%e9%9d%a2%e5%9b%be%e7%89%87" class="subheading-anchor" aria-label="Permalink for this section"></a></h1><h2>节点正确页面。<span class="hx:absolute hx:-mt-20" id="节点正确页面"></span>
-    <a href="#%e8%8a%82%e7%82%b9%e6%ad%a3%e7%a1%ae%e9%a1%b5%e9%9d%a2" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><img src="/images/image-20251121162237-375s31w.png" alt="image"  loading="lazy" /></p>
-<h2>有资格页面<span class="hx:absolute hx:-mt-20" id="有资格页面"></span>
-    <a href="#%e6%9c%89%e8%b5%84%e6%a0%bc%e9%a1%b5%e9%9d%a2" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>没有资格<br>
-​<img src="/images/image-20251121162328-dajbg1b.png" alt="image"  loading="lazy" /></p>
-<p>有资格并且订阅</p>
-<p><img src="/images/image-20251121162341-vmg1tce.png" alt="image"  loading="lazy" /></p>
-<h2>验证资格<span class="hx:absolute hx:-mt-20" id="验证资格"></span>
-    <a href="#%e9%aa%8c%e8%af%81%e8%b5%84%e6%a0%bc" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><img src="/images/%e9%aa%8c%e8%af%81%e9%a1%b5%e9%9d%a2-20251121162614-tt0w8k6.png" alt="验证页面"  loading="lazy" /></p>
-<h2>通过审核<span class="hx:absolute hx:-mt-20" id="通过审核"></span>
-    <a href="#%e9%80%9a%e8%bf%87%e5%ae%a1%e6%a0%b8" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>‍</p>
-<h2>审核通过，获取offer<span class="hx:absolute hx:-mt-20" id="审核通过获取offer"></span>
-    <a href="#%e5%ae%a1%e6%a0%b8%e9%80%9a%e8%bf%87%e8%8e%b7%e5%8f%96offer" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><img src="/images/%e9%80%9a%e8%bf%87%e9%aa%8c%e8%af%81%e5%90%8e,%e9%9c%80%e8%a6%81%e8%ae%a2%e9%98%85%e9%a1%b5%e9%9d%a2-20251121162614-a21888m.png" alt="通过验证后,需要订阅页面"  loading="lazy" /></p>
-<h2>成功订阅<span class="hx:absolute hx:-mt-20" id="成功订阅"></span>
-    <a href="#%e6%88%90%e5%8a%9f%e8%ae%a2%e9%98%85" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><img src="/images/Gemini%e6%88%90%e5%8a%9f%e8%ae%a2%e9%98%85-20251121162614-emyn3e1.png" alt="Gemini成功订阅"  loading="lazy" /></p>
-<h1>4.参考资料<span class="hx:absolute hx:-mt-20" id="4参考资料"></span>
-    <a href="#4%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="subheading-anchor" aria-label="Permalink for this section"></a></h1><p><a href="https://www.youtube.com/watch?v=e2OBaYIjcK8&amp;t=2s"target="_blank" rel="noopener">免费获得谷歌AI大礼包一年 | Gemini高级版 | Google One 2TB空间| Google AI Pro | SheerID验证方法</a></p>
-<p>根据视频，可以看自己卡在哪里，但是其中方法已经陈旧参考我的文档。</p>
+<li>
+<p>设置环境变量：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">DOCKER_HOST</span><span class="o">=</span>unix:///run/user/<span class="k">$(</span>id -u<span class="k">)</span>/docker.sock</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</li>
+</ul>
+<h2>3. 常用容器操作<span class="hx:absolute hx:-mt-20" id="3-常用容器操作"></span>
+    <a href="#3-%e5%b8%b8%e7%94%a8%e5%ae%b9%e5%99%a8%e6%93%8d%e4%bd%9c" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>
+<p>​<strong>运行容器</strong>：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d --name <span class="nb">test</span> nginx:latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</li>
+<li>
+<p>​<strong>查看容器</strong>：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker ps</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</li>
+<li>
+<p>​<strong>停止容器</strong>：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker stop test</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</li>
+</ul>
+<h2>4. 卷挂载<span class="hx:absolute hx:-mt-20" id="4-卷挂载"></span>
+    <a href="#4-%e5%8d%b7%e6%8c%82%e8%bd%bd" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>
+<p>Rootless 模式下只能挂载用户有权限的目录，推荐使用 <code>$HOME</code> 下路径：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d -v ~/mydata:/data nginx:latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</li>
+<li>
+<p>挂载系统目录（如 <code>/data/...</code>）可能报错，原因是 UID/GID 映射不一致。解决方法：</p>
+<ul>
+<li>去掉 <code>-u</code> 参数，避免强制 UID。</li>
+<li>放宽权限（如 <code>chmod 777</code>）。</li>
+<li>或者在 rootful 模式下运行。</li>
+</ul>
+</li>
+</ul>
+<h2>5. 网络端口映射<span class="hx:absolute hx:-mt-20" id="5-网络端口映射"></span>
+    <a href="#5-%e7%bd%91%e7%bb%9c%e7%ab%af%e5%8f%a3%e6%98%a0%e5%b0%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>
+<p>Rootless 模式只能映射 ​<strong>1024 以上的端口</strong>：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d -p 8080:80 nginx:latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</li>
+<li>
+<p>如果需要低于 1024 的端口（如 80/443），必须使用 rootful 模式。</p>
+</li>
+</ul>
+<h2>6. 日志与调试<span class="hx:absolute hx:-mt-20" id="6-日志与调试"></span>
+    <a href="#6-%e6%97%a5%e5%bf%97%e4%b8%8e%e8%b0%83%e8%af%95" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>
+<p>查看容器日志：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker logs test</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</li>
+<li>
+<p>查看守护进程日志：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">journalctl --user -u docker.service</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+</li>
+</ul>
 <p>‍</p>
 
       </div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/blog/20250815_scgpt/"
-        title="scGPT学习日记"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>scGPT学习日记</a><a
         href="/blog/20251220_hugo-waline-comment/"
         title="Hugo添加Waline评论功能记录"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Hugo添加Waline评论功能记录</a><a
+        href="/blog/test/"
+        title="测试"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Hugo添加Waline评论功能记录<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >测试<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
 <div id="waline" class="hx-mt-8"></div>
 
@@ -1127,39 +1212,27 @@
       
       <div class="mtoc-list-container"><div class="mtoc-tree">
             <ul>
-    <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="mtoc-link" data-id="注意事项">注意事项</a>
-      </div></li>
-    <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#1-%e5%85%b7%e5%a4%87%e7%9a%84%e6%9d%a1%e4%bb%b6" class="mtoc-link" data-id="1-具备的条件">1. 具备的条件</a>
-      </div></li>
-    <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#2-%e5%bc%80%e5%a7%8b%e5%ae%9e%e6%96%bd" class="mtoc-link" data-id="2-开始实施">2. 开始实施</a>
-      </div></li>
     <li class="mtoc-item has-children is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-toggle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><a href="#3%e5%85%b3%e9%94%ae%e9%a1%b5%e9%9d%a2%e5%9b%be%e7%89%87" class="mtoc-link" data-id="3关键页面图片">3.关键页面图片</a>
+      <div class="mtoc-item-row"><div class="mtoc-toggle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><a href="#docker-rootless-%e6%a8%a1%e5%bc%8f%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9c%e6%96%87%e6%a1%a3" class="mtoc-link" data-id="docker-rootless-模式基本操作文档">Docker Rootless 模式基本操作文档</a>
       </div><div class="mtoc-subgroup"><ul>
     <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#%e8%8a%82%e7%82%b9%e6%ad%a3%e7%a1%ae%e9%a1%b5%e9%9d%a2" class="mtoc-link" data-id="节点正确页面">节点正确页面。</a>
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#1-%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" class="mtoc-link" data-id="1-前置条件">1. 前置条件</a>
       </div></li>
     <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#%e6%9c%89%e8%b5%84%e6%a0%bc%e9%a1%b5%e9%9d%a2" class="mtoc-link" data-id="有资格页面">有资格页面</a>
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#2-%e5%90%af%e5%8a%a8-rootless-docker" class="mtoc-link" data-id="2-启动-rootless-docker">2. 启动 Rootless Docker</a>
       </div></li>
     <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#%e9%aa%8c%e8%af%81%e8%b5%84%e6%a0%bc" class="mtoc-link" data-id="验证资格">验证资格</a>
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#3-%e5%b8%b8%e7%94%a8%e5%ae%b9%e5%99%a8%e6%93%8d%e4%bd%9c" class="mtoc-link" data-id="3-常用容器操作">3. 常用容器操作</a>
       </div></li>
     <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#%e9%80%9a%e8%bf%87%e5%ae%a1%e6%a0%b8" class="mtoc-link" data-id="通过审核">通过审核</a>
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#4-%e5%8d%b7%e6%8c%82%e8%bd%bd" class="mtoc-link" data-id="4-卷挂载">4. 卷挂载</a>
       </div></li>
     <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#%e5%ae%a1%e6%a0%b8%e9%80%9a%e8%bf%87%e8%8e%b7%e5%8f%96offer" class="mtoc-link" data-id="审核通过获取offer">审核通过，获取offer</a>
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#5-%e7%bd%91%e7%bb%9c%e7%ab%af%e5%8f%a3%e6%98%a0%e5%b0%84" class="mtoc-link" data-id="5-网络端口映射">5. 网络端口映射</a>
       </div></li>
     <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#%e6%88%90%e5%8a%9f%e8%ae%a2%e9%98%85" class="mtoc-link" data-id="成功订阅">成功订阅</a>
-      </div></li></ul></div></li>
-    <li class="mtoc-item  is-expanded">
-      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#4%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="mtoc-link" data-id="4参考资料">4.参考资料</a>
-      </div></li></ul>
+      <div class="mtoc-item-row"><div class="mtoc-spacer"></div><a href="#6-%e6%97%a5%e5%bf%97%e4%b8%8e%e8%b0%83%e8%af%95" class="mtoc-link" data-id="6-日志与调试">6. 日志与调试</a>
+      </div></li></ul></div></li></ul>
           </div></div>
     </div>
   </div>
