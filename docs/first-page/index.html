@@ -41,8 +41,8 @@
   <meta name="twitter:title" content="示例页面">
   <meta name="twitter:description" content="这是一个简单的示例页面。">
 
-    <link rel="preload" href="/css/compiled/main.min.2e957ef47d9e6e454c9cbf33da4b5a5410f706d01b62910bc831dca5e7c8f1a2.css" as="style" integrity="sha256-LpV&#43;9H2ebkVMnL8z2ktaVBD3BtAbYpELyDHcpefI8aI=" />
-    <link href="/css/compiled/main.min.2e957ef47d9e6e454c9cbf33da4b5a5410f706d01b62910bc831dca5e7c8f1a2.css" rel="stylesheet" integrity="sha256-LpV&#43;9H2ebkVMnL8z2ktaVBD3BtAbYpELyDHcpefI8aI=" />
+    <link rel="preload" href="/css/compiled/main.min.7160e446a24313011dc0beca9ed8cf2619ca6f0d4b0e3aa7ec144c71c0ea0e16.css" as="style" integrity="sha256-cWDkRqJDEwEdwL7KntjPJhnKbw1LDjqn7BRMccDqDhY=" />
+    <link href="/css/compiled/main.min.7160e446a24313011dc0beca9ed8cf2619ca6f0d4b0e3aa7ec144c71c0ea0e16.css" rel="stylesheet" integrity="sha256-cWDkRqJDEwEdwL7KntjPJhnKbw1LDjqn7BRMccDqDhY=" />
 
   
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
@@ -322,14 +322,6 @@
   >scGPT学习日记
     </a>
               
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/blog/20241208_clashtool/"
-    
-  >Clash的工具再修改
-    </a>
-              
             </li></ul>
       </div></li>
           <li class=""><a
@@ -536,6 +528,39 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    
+    const tocList = document.getElementById('toc-list');
+    if (tocList) {
+      const items = tocList.querySelectorAll('li[data-level]');
+      const levels = [];
+      
+      
+      items.forEach(item => {
+        const level = parseInt(item.getAttribute('data-level'));
+        if (!levels.includes(level)) {
+          levels.push(level);
+        }
+      });
+      
+      
+      levels.sort((a, b) => a - b);
+      const levelMap = {};
+      levels.forEach((level, index) => {
+        levelMap[level] = index;
+      });
+      
+      
+      items.forEach(item => {
+        const level = parseInt(item.getAttribute('data-level'));
+        const relativeLevel = levelMap[level];
+        const padding = relativeLevel * 1; 
+        const link = item.querySelector('a');
+        if (link) {
+          link.style.paddingLeft = padding + 'rem';
+        }
+      });
+    }
+
     const backToTopBtn = document.getElementById('backToTop');
     const scrollToBottomBtn = document.getElementById('scrollToBottom');
 
